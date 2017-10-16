@@ -24,7 +24,7 @@ def open_file (file):
 			if re.match(r'^(\$.*?(\s=|\s=\s|=\s|=)sybase_.*?)|((\ssybase_|sybase_).*)$', line): #extension sybase
 				table.append("5")
 			#expressions regulars php 5.3
-			if re.match(r'(call_user_method_((\(([\"\w\s\S\"]*)\))|array(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(call_user_method((\(([\"\w\s\S\"]*)\))|_array(\(([\"\w\s\S\"]*)\))))',line):
 				table.append("5")
 			if re.match(r'(define_syslog_variables(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
@@ -34,39 +34,38 @@ def open_file (file):
 				table.append("5")
 			if re.match(r'(set_magic_quotes_runtime(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(session_(register|unregister|is_registered)(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(session_(register|unregister|is_registered)(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")				
-			if re.match(r'(set_socket_blocking)(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(set_socket_blocking)(\(([\"\w\s\S\"]*)\))',line):
 				table.append("5")		
-			if re.match(r'(split(|i))(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(split(|i))(\(([\"\w\s\S\"]*)\))',line):
 				table.append("5")	
-			if re.match(r'(sql_regcase(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(sql_regcase(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(mysql_db_query(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(mysql_db_query(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(mysql_escape_string(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(mysql_escape_string(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
 
 			#expressions regulars php 5.4
-			if re.match(r'(mysql_list_dbs(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(mysql_list_dbs(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
 
 			#expressions regulars php 5.5
-			if re.match(r'(preg_replace(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(preg_replace(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(IntlDateFormatter::setTimeZoneID(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(IntlDateFormatter::setTimeZoneID(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\))))',line):
-				table.append("5")ç
-			if re.match(r'(mcrypt_(cbc|cfb|ecb|ofb)(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(iconv\.(input|output|internal)(_encoding)))',line):
+			if re.match(r'(mcrypt_(cbc|cfb|ecb|ofb)(\(([\"\w\s\S\"]*)\)))',line):
 				table.append("5")
-			if re.match(r'(mbstring\.(http|internal)_(input|output|encoding)))',line):
+			if re.match(r'(iconv\.(input|output|internal)(_encoding))',line):
 				table.append("5")
-
+			if re.match(r'(mbstring\.(http|internal)_(input|output|encoding))',line):
+				table.append("5")
 
 			if re.match(r'^declare.?strict_types(\s=|=\s|\s=\s|=)1.*?$' , line): #scalar type declarations mode strict
 				table.append("7")
