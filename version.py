@@ -24,47 +24,45 @@ def open_file (file):
 			if re.match(r'^(\$.*?(\s=|\s=\s|=\s|=)sybase_.*?)|((\ssybase_|sybase_).*)$', line): #extension sybase
 				table.append("5")
 			#expressions regulars php 5.3
-			if re.match(r'(call_user_method((\(([\"\w\s\S\"]*)\))|_array(\(([\"\w\s\S\"]*)\))))',line):
+			if re.match(r'(call_user_method((\(([\"\w\s\S\"]*)\))|_array(\(([\"\w\s\S\"]*)\))))',line): #Call a user method on an specific object
 				table.append("5")
-			if re.match(r'(define_syslog_variables(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(define_syslog_variables(\(([\"\w\s\S\"]*)\)))',line): # Initializes all syslog related variables
 				table.append("5")
-			if re.match(r'(dl(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(dl(\(([\"\w\s\S\"]*)\)))',line):# Loads a PHP extension at runtime
 				table.append("5")
-			if re.match(r'(mcrypt_generic_end(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(mcrypt_generic_end(\(([\"\w\s\S\"]*)\)))',line):#  This function terminates encryption
 				table.append("5")
-			if re.match(r'(set_magic_quotes_runtime(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(set_magic_quotes_runtime(\(([\"\w\s\S\"]*)\)))',line):#Sets the current active configuration setting of magic_quotes_runtime
 				table.append("5")
-			if re.match(r'(session_(register|unregister|is_registered)(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(session_(register|unregister|is_registered)(\(([\"\w\s\S\"]*)\)))',line):#Register one or more global variables with the current session
 				table.append("5")				
-			if re.match(r'(set_socket_blocking)(\(([\"\w\s\S\"]*)\))',line):
+			if re.match(r'(set_socket_blocking)(\(([\"\w\s\S\"]*)\))',line):#Set blocking/non-blocking mode on a stream
 				table.append("5")		
-			if re.match(r'(split(|i))(\(([\"\w\s\S\"]*)\))',line):
+			if re.match(r'(split(|i))(\(([\"\w\s\S\"]*)\))',line):#Split string into array by regular expression
 				table.append("5")	
-			if re.match(r'(sql_regcase(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(sql_regcase(\(([\"\w\s\S\"]*)\)))',line):#Make regular expression for case insensitive match
 				table.append("5")
-			if re.match(r'(mysql_db_query(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(mysql_db_query(\(([\"\w\s\S\"]*)\)))',line):#Selects a database and executes a query on it
 				table.append("5")
-			if re.match(r'(mysql_escape_string(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(mysql_escape_string(\(([\"\w\s\S\"]*)\)))',line):#Escapes a string for use in a mysql_query
 				table.append("5")
 
 			#expressions regulars php 5.4
-			if re.match(r'(mysql_list_dbs(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(mysql_list_dbs(\(([\"\w\s\S\"]*)\)))',line):#List databases available on a MySQL server
 				table.append("5")
 
 			#expressions regulars php 5.5
-			if re.match(r'(preg_replace(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(preg_replace(\(([\"\w\s\S\"]*)\)))',line):#Perform a regular expression search and replace
 				table.append("5")
-			if re.match(r'(IntlDateFormatter::setTimeZoneID(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(IntlDateFormatter\:\:setTimeZoneID(\(([\"\w\s\S\"]*)\)))',line):#Sets the time zone to use
 				table.append("5")
-			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\)))',line):#Sets the time zone to use
 				table.append("5")
-			if re.match(r'(datefmt_set_timezone_id(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(mcrypt_(cbc|cfb|ecb|ofb)(\(([\"\w\s\S\"]*)\)))',line):# Encrypts/decrypts data in CBC|CFB|ECB|OFB mode
 				table.append("5")
-			if re.match(r'(mcrypt_(cbc|cfb|ecb|ofb)(\(([\"\w\s\S\"]*)\)))',line):
+			if re.match(r'(iconv\.(input|output|internal)(_encoding))',line):#
 				table.append("5")
-			if re.match(r'(iconv\.(input|output|internal)(_encoding))',line):
-				table.append("5")
-			if re.match(r'(mbstring\.(http|internal)_(input|output|encoding))',line):
+			if re.match(r'(mbstring\.(http|internal)_(input|output|encoding))',line):#Defines default character code detection order.
 				table.append("5")
 
 			if re.match(r'^declare.?strict_types(\s=|=\s|\s=\s|=)1.*?$' , line): #scalar type declarations mode strict
