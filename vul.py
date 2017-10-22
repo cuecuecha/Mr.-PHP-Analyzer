@@ -82,3 +82,103 @@ def get_lfi_rfi():
 					if lexpresiones[i].search(line):
 						print(fs)
 						print(line)
+
+def get_insecureSI():
+	n= re.compile(r"(?<!(basename\(\s))\$\_FILES(\[.*\])",re.I)
+	lexpresiones = [n]
+	file=files.get_listfiles()
+	for fs in file:
+		with open(fs,"r") as f:
+			for line in f.readlines():
+				line = line.strip()
+				if re.match(r'^\s*$', line): continue #If line is empty, continue with the next one
+				if line[0] == '#': continue
+				for i in range(0,len(lexpresiones)):
+					if lexpresiones[i].search(line):						
+						print(fs)
+						print(line)
+
+def get_pathTraversal():
+	n= re.compile(r"\.\.[\/\\]",re.I) #Directory traversal
+	o= re.compile(r"%(c0\.|af\.|5c\.)",re.I) #Directory traversal unicode + urlencoding
+	p = re.compile(r"%2e%2e[\/\\]",re.I) #Directory traversal urlencoding
+	q = re.compile(r"%c0%ae[\/\\]",re.I) #Directory traversal unicode + urlencoding
+	lexpresiones = [q]
+	file=files.get_listfiles()
+	for fs in file:
+		with open(fs,"r") as f:
+			for line in f.readlines():
+				line = line.strip()
+				if re.match(r'^\s*$', line): continue #If line is empty, continue with the next one
+				if line[0] == '#': continue
+				for i in range(0,len(lexpresiones)):
+					if lexpresiones[i].search(line):						
+						print(fs)
+						print(line)
+
+def get_sqli():
+	n= re.compile(r"find_in_set.*?\(.+?,.+?\)",re.I) #Common MySQL function 'find_in_set'
+	o= re.compile(r"\bmysql.*?\..*?user\b",re.I) # MySQL information disclosure 'mysql.user'
+	p = re.compile(r"\bunion\b.+?\bselect\b",re.I) #Common SQL command 'union select'
+	q = re.compile(r"\bupdate\b.+?\bset\b",re.I) #Common SQL command 'update'
+	r = re.compile(r"\bdrop\b.+?\b(database|table)\b",re.I) #Common SQL command 'drop'
+	s = re.compile(r"\[\$(ne|eq|lte?|gte?|n?in|mod|all|size|exists|type|slice|or)\]",re.I) #### MongoDB SQL commands ###duda
+	t = re.compile(r"\bload_file\b.*?\(.+?\)",re.I) #MySQL file disclosure 'load_file'
+	u = re.compile(r"\bload\b.*?\bdata\b.*?\binfile\b.*?\binto\b.*?\btable\b",re.I) #MySQL file disclosure 'load data' #nocachonada
+	v = re.compile(r"\bselect\b.*?\binto\b.*?\b(out|dump)file\b",re.I) #MySQL file write 'into outfile' #nocachonada
+	x = re.compile(r"(SELECT\s)(group_)?concat(_ws)?\b.*?\(.+?\)",re.I) #MySQL function 'concat'
+	y = re.compile(r"(SELECT\s)(char_|bit_)?length\b.*?\(.+?\)",re.I) #Common SQL function 'length'
+	z = re.compile(r"(SELECT\s)(un)?hex\b.*?\(.+?\)",re.I) #Common SQL function 'hex/unhex'
+	a = re.compile(r"(select\s.*from\s)",re.I)
+	b = re.compile(r"(select\s)(current_)?user\b.*?\(.*?\)",re.I) #Common SQL function 'user'
+	c = re.compile(r"(select\s)version\b.*?\(.*?\)",re.I) #Common SQL function 'version'
+	d = re.compile(r"\bwhere\b.+?(\b(not_)?(like|regexp)\b|[=<>])",re.I) # Common SQL comparison 'where'
+	e = re.compile(r"\binsert\b.+?\binto\b.*?\bvalues\b.*?\(.+?\)",re.I) #Common SQL command 'insert'
+	f = re.compile(r"\bselect\b.+?\bfrom\b",re.I) # Common SQL command 'select'
+	g = re.compile(r"\bpg_database\b",re.I) #PgSQL information disclosure 'pg_database'
+	h = re.compile(r"(SELECT\s)(current_)?database\b.*?\(.*?\)",re.I) #Common SL command 'select database'
+	lexpresiones = [h]
+	file=files.get_listfiles()
+	for fs in file:
+		with open(fs,"r") as f:
+			for line in f.readlines():
+				line = line.strip()
+				if re.match(r'^\s*$', line): continue #If line is empty, continue with the next one
+				if line[0] == '#': continue
+				for i in range(0,len(lexpresiones)):
+					if lexpresiones[i].search(line):						
+						print(fs)
+						print(line)
+
+def get_commandInjection():
+	n = re.compile(r"system\s\(",re.I) 
+	o = re.compile(r"exec\(",re.I) 
+	p = re.compile(r"query\(",re.I) 
+	lexpresiones = [p]
+	file=files.get_listfiles()
+	for fs in file:
+		with open(fs,"r") as f:
+			for line in f.readlines():
+				line = line.strip()
+				if re.match(r'^\s*$', line): continue #If line is empty, continue with the next one
+				if line[0] == '#': continue
+				for i in range(0,len(lexpresiones)):
+					if lexpresiones[i].search(line):						
+						print(fs)
+						print(line)
+
+def get_sessionCookie():
+	n = re.compile(r"cookie",re.I) 
+	o= re.compile(r"session_set_cookie_params",re.I)
+	lexpresiones = [n]
+	file=files.get_listfiles()
+	for fs in file:
+		with open(fs,"r") as f:
+			for line in f.readlines():
+				line = line.strip()
+				if re.match(r'^\s*$', line): continue #If line is empty, continue with the next one
+				if line[0] == '#': continue
+				for i in range(0,len(lexpresiones)):
+					if lexpresiones[i].search(line):						
+						print(fs)
+						print(line)
