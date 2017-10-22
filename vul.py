@@ -2,12 +2,13 @@
 import os
 import re
 import files
+import generatecsv
+import datetime
 class get_vul:
 	pass
 
 def get_xss():
-	list =[]
-	table=[]
+
 	n= re.compile(r"(?<!(trim\())(\$\_(POST|REQUEST|GET)\[.*\])",re.I)
 	o = re.compile(r"(?<!(htmlentities\())(\$\_(POST|REQUEST|GET)\[.*\])",re.I)
 	p = re.compile(r"(?<!(strip\_tags\())(\$\_(POST|REQUEST|GET)\[.*\])",re.I) 
@@ -30,6 +31,8 @@ def get_xss():
 					if lexpresiones[i].search(line):						
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'1','xss',line,fs)
+
 
 def get_lfi_rfi():
 	table=[]
@@ -82,6 +85,8 @@ def get_lfi_rfi():
 					if lexpresiones[i].search(line):
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'2','lfi_rfi',line,fs)
+
 
 def get_insecureSI():
 	n= re.compile(r"(?<!(basename\(\s))\$\_FILES(\[.*\])",re.I)
@@ -97,6 +102,8 @@ def get_insecureSI():
 					if lexpresiones[i].search(line):						
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'3','insecure_send_information',line,fs)
+
 
 def get_pathTraversal():
 	n= re.compile(r"\.\.[\/\\]",re.I) #Directory traversal
@@ -115,6 +122,8 @@ def get_pathTraversal():
 					if lexpresiones[i].search(line):						
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'4','path_traversal',line,fs)
+
 
 def get_sqli():
 	n= re.compile(r"find_in_set.*?\(.+?,.+?\)",re.I) #Common MySQL function 'find_in_set'
@@ -149,6 +158,8 @@ def get_sqli():
 					if lexpresiones[i].search(line):						
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'5','sqli',line,fs)
+
 
 def get_commandInjection():
 	n = re.compile(r"system\s\(",re.I) 
@@ -166,6 +177,8 @@ def get_commandInjection():
 					if lexpresiones[i].search(line):						
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'6','commandInjection',line,fs)
+
 
 def get_sessionCookie():
 	n = re.compile(r"cookie",re.I) 
@@ -182,3 +195,4 @@ def get_sessionCookie():
 					if lexpresiones[i].search(line):						
 						print(fs)
 						print(line)
+						generatecsv.get_namecsv(str(datetime.date.today()),'7','weakCookie',line,fs)
