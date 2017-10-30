@@ -1,0 +1,434 @@
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+32,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root" , "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+33,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+34,php,Mon Oct 30 11:26:08 2017,5,$username = mysql_escape_string($username);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+35,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+36,php,Mon Oct 30 11:26:08 2017,5,$result = mysql_query($sql);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+37,php,Mon Oct 30 11:26:08 2017,5,|$aValues = mysql_fetch_array($oResult,MYSQL_ASSOC);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+38,php,Mon Oct 30 11:26:08 2017,5,|$oLink = mysql_connect($sDBServer,$sDBUsername,$sDBPassword);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+39,php,Mon Oct 30 11:26:08 2017,5,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+40,php,Mon Oct 30 11:26:08 2017,5,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+41,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+42,php,Mon Oct 30 11:26:08 2017,5,$oResult = mysql_query($sQuery);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+43,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+44,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+45,php,Mon Oct 30 11:26:08 2017,5,$num_rows = mysql_num_rows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+46,php,Mon Oct 30 11:26:08 2017,5,|mysql_result($result, 0, "name");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+47,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+48,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+49,php,Mon Oct 30 11:26:08 2017,5,|mysql_connect('localhost', 'username', 'password');|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+50,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+51,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+52,php,Mon Oct 30 11:26:08 2017,5,mysql_select_db('database');,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+53,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+54,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+55,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_select_db,mysqli_select_db()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+56,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+57,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect("localhost", "root", "moth");|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+58,php,Mon Oct 30 11:26:08 2017,5,mysql_close($oLink);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+59,php,Mon Oct 30 11:26:08 2017,5,|mysql_select_db ("w3af_test", $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+60,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query( $sql_stm, $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+61,php,Mon Oct 30 11:26:08 2017,5,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+62,php,Mon Oct 30 11:26:08 2017,5,|$link = mysql_connect ("localhost", "root", "moth");|,mysql_(),mysqli_()

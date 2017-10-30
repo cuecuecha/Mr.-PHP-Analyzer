@@ -1,0 +1,168 @@
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+139,php,Mon Oct 30 11:48:32 2017,5,|mysql_pconnect(), or through implicit connection: use MySQLi or PDO_MySQL|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+140,php,Mon Oct 30 11:48:32 2017,5,mysql_DropDB($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+141,php,Mon Oct 30 11:48:32 2017,5,|mysql_TableName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+142,php,Mon Oct 30 11:48:32 2017,5,|mysql_dbName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+143,php,Mon Oct 30 11:48:32 2017,5,|mysql_get_proto_info(), and mysql_get_host_info() functions. (Sean)</li>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+144,php,Mon Oct 30 11:48:32 2017,5,$num = mysql_numrows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+145,php,Mon Oct 30 11:48:32 2017,5,$result = mysql_ListDBs()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+146,php,Mon Oct 30 11:48:32 2017,5,|mysql_thread_id(), mysql_stat() and mysql_list_processes(). (Zak, Georg)</li>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+147,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldLen($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+148,php,Mon Oct 30 11:48:32 2017,5,|$tb_names[$i]=mysql_tablename($result, $i);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+149,php,Mon Oct 30 11:48:32 2017,5,|mysql_Result($result,$i,field)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+150,php,Mon Oct 30 11:48:32 2017,5,mysql_connect() and mysql_pconnect(). (Georg)</li>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+151,php,Mon Oct 30 11:48:32 2017,5,|ereg(expr,arg[,regs])</span></a></dt>|,ereg,preg_match()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+152,php,Mon Oct 30 11:48:32 2017,5,mysql_NumFields($result)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+153,php,Mon Oct 30 11:48:32 2017,5,mysql_insert_id()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+154,php,Mon Oct 30 11:48:32 2017,5,mysql_NumRows($result)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+155,php,Mon Oct 30 11:48:32 2017,5,mysql_close()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+156,php,Mon Oct 30 11:48:32 2017,5,|mysql_Listfields($database,$tablename)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+157,php,Mon Oct 30 11:48:32 2017,5,$result = mysql_listtables("dbname");,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+158,php,Mon Oct 30 11:48:32 2017,5,mysql_CreateDB($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+159,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+160,php,Mon Oct 30 11:48:32 2017,5,mysql_ListTables($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+161,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldType($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+162,php,Mon Oct 30 11:48:32 2017,5,|mysql_fieldflags, mysql_fieldlen, mysql_fieldname,|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+163,php,Mon Oct 30 11:48:32 2017,5,mysql_fieldtype. A result identifier is a positive integer.,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+164,php,Mon Oct 30 11:48:32 2017,5,|mysql_connect($hostname [,username|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+165,php,Mon Oct 30 11:48:32 2017,5,mysql_affected_rows()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+166,php,Mon Oct 30 11:48:32 2017,5,|call_user_method('method', 'class'), and also array('class', 'method')|,call_user_method,call_user_func()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+139,php,Mon Oct 30 11:48:32 2017,5,|mysql_pconnect(), or through implicit connection: use MySQLi or PDO_MySQL|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+140,php,Mon Oct 30 11:48:32 2017,5,mysql_DropDB($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+141,php,Mon Oct 30 11:48:32 2017,5,|mysql_TableName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+142,php,Mon Oct 30 11:48:32 2017,5,|mysql_dbName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+143,php,Mon Oct 30 11:48:32 2017,5,|mysql_get_proto_info(), and mysql_get_host_info() functions. (Sean)</li>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+144,php,Mon Oct 30 11:48:32 2017,5,$num = mysql_numrows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+145,php,Mon Oct 30 11:48:32 2017,5,$result = mysql_ListDBs()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+146,php,Mon Oct 30 11:48:32 2017,5,|mysql_thread_id(), mysql_stat() and mysql_list_processes(). (Zak, Georg)</li>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+147,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldLen($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+148,php,Mon Oct 30 11:48:32 2017,5,|$tb_names[$i]=mysql_tablename($result, $i);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+149,php,Mon Oct 30 11:48:32 2017,5,|mysql_Result($result,$i,field)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+150,php,Mon Oct 30 11:48:32 2017,5,mysql_connect() and mysql_pconnect(). (Georg)</li>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+151,php,Mon Oct 30 11:48:32 2017,5,|ereg(expr,arg[,regs])</span></a></dt>|,ereg,preg_match()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+152,php,Mon Oct 30 11:48:32 2017,5,mysql_NumFields($result)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+153,php,Mon Oct 30 11:48:32 2017,5,mysql_insert_id()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+154,php,Mon Oct 30 11:48:32 2017,5,mysql_NumRows($result)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+155,php,Mon Oct 30 11:48:32 2017,5,mysql_close()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+156,php,Mon Oct 30 11:48:32 2017,5,|mysql_Listfields($database,$tablename)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+157,php,Mon Oct 30 11:48:32 2017,5,$result = mysql_listtables("dbname");,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+158,php,Mon Oct 30 11:48:32 2017,5,mysql_CreateDB($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+159,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+160,php,Mon Oct 30 11:48:32 2017,5,mysql_ListTables($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+161,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldType($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+162,php,Mon Oct 30 11:48:32 2017,5,|mysql_fieldflags, mysql_fieldlen, mysql_fieldname,|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+163,php,Mon Oct 30 11:48:32 2017,5,mysql_fieldtype. A result identifier is a positive integer.,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+164,php,Mon Oct 30 11:48:32 2017,5,|mysql_connect($hostname [,username|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+165,php,Mon Oct 30 11:48:32 2017,5,mysql_affected_rows()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+166,php,Mon Oct 30 11:48:32 2017,5,|call_user_method('method', 'class'), and also array('class', 'method')|,call_user_method,call_user_func()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+139,php,Mon Oct 30 11:48:32 2017,5,|mysql_pconnect(), or through implicit connection: use MySQLi or PDO_MySQL|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+140,php,Mon Oct 30 11:48:32 2017,5,mysql_DropDB($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+141,php,Mon Oct 30 11:48:32 2017,5,|mysql_TableName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+142,php,Mon Oct 30 11:48:32 2017,5,|mysql_dbName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+143,php,Mon Oct 30 11:48:32 2017,5,|mysql_get_proto_info(), and mysql_get_host_info() functions. (Sean)</li>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+144,php,Mon Oct 30 11:48:32 2017,5,$num = mysql_numrows($result);,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+145,php,Mon Oct 30 11:48:32 2017,5,$result = mysql_ListDBs()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+146,php,Mon Oct 30 11:48:32 2017,5,|mysql_thread_id(), mysql_stat() and mysql_list_processes(). (Zak, Georg)</li>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+147,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldLen($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+148,php,Mon Oct 30 11:48:32 2017,5,|$tb_names[$i]=mysql_tablename($result, $i);|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+149,php,Mon Oct 30 11:48:32 2017,5,|mysql_Result($result,$i,field)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+150,php,Mon Oct 30 11:48:32 2017,5,mysql_connect() and mysql_pconnect(). (Georg)</li>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+151,php,Mon Oct 30 11:48:32 2017,5,|ereg(expr,arg[,regs])</span></a></dt>|,ereg,preg_match()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+152,php,Mon Oct 30 11:48:32 2017,5,mysql_NumFields($result)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+153,php,Mon Oct 30 11:48:32 2017,5,mysql_insert_id()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+154,php,Mon Oct 30 11:48:32 2017,5,mysql_NumRows($result)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+155,php,Mon Oct 30 11:48:32 2017,5,mysql_close()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+156,php,Mon Oct 30 11:48:32 2017,5,|mysql_Listfields($database,$tablename)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+157,php,Mon Oct 30 11:48:32 2017,5,$result = mysql_listtables("dbname");,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+158,php,Mon Oct 30 11:48:32 2017,5,mysql_CreateDB($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+159,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldName($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+160,php,Mon Oct 30 11:48:32 2017,5,mysql_ListTables($database)</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+161,php,Mon Oct 30 11:48:32 2017,5,|mysql_FieldType($result,$i)</span></a></dt>|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+162,php,Mon Oct 30 11:48:32 2017,5,|mysql_fieldflags, mysql_fieldlen, mysql_fieldname,|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+163,php,Mon Oct 30 11:48:32 2017,5,mysql_fieldtype. A result identifier is a positive integer.,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+164,php,Mon Oct 30 11:48:32 2017,5,|mysql_connect($hostname [,username|,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+165,php,Mon Oct 30 11:48:32 2017,5,mysql_affected_rows()</span></a></dt>,mysql_(),mysqli_()
+ID,NAME,DATE,VERSION,LINE,OBSOLETE FUNCTION,ALTERNATIVE
+166,php,Mon Oct 30 11:48:32 2017,5,|call_user_method('method', 'class'), and also array('class', 'method')|,call_user_method,call_user_func()
