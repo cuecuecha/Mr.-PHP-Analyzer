@@ -60,9 +60,9 @@ def create_tables():
 			      ('xss', 'on\w+\s*=', 'HTML event handler', '1'),
                   ('xss', '#.+?\)[\"\s]*>', 'HTML breaking', '1'),
 			      ('xss', '<(form|button|input|keygen|textarea|select|option)', 'Common JavaScript injection points (forms)', '1'),
-			      ('lfi&rfi', '\.\.[\/\\]', 'Directory traversal', '5'),
-			      ('lfi&rfi', '%2e%2e[\/\\]', 'Directory traversal urlencoding', '5'),
-			      ('lfi&rfi', '%c0%ae[\/\\]', 'Directory traversal urlencoding', '5'),
+			      ('lfi&rfi', '\.\.[\/\\\]', 'Directory traversal', '5'),
+			      ('lfi&rfi', '%2e%2e[\/\\\]', 'Directory traversal urlencoding', '5'),
+			      ('lfi&rfi', '%c0%ae[\/\\\]', 'Directory traversal urlencoding', '5'),
 			      ('lfi&rfi', '\/etc\/[.\/]*(passwd|shadow|master\.passwd)', 'Directory traversal', '5'),
                   ('lfi&rfi', '(?<!\w)(boot\.ini|global\.asa|sam) ', 'Common Windows files', '6'),
                   ('lfi&rfi', ' file_(get|put)_contents.*?\(.+?\)', 'Critical PHP function file_get_contents/file_put_contents', '6'),
@@ -70,7 +70,7 @@ def create_tables():
                   ('lfi&rfi', ' require(_once)? .*?;', 'Critical PHP function require', '4'),
 			      ('lfi&rfi', '\(\)\s*\{.*?;\s*\}\s*;', 'Shellshock (CVE-2014-6271)', '6'),
                   ('lfi&rfi', '[=(].+?\?.+?\:', 'C-style ternary operator', '6'),
-	              ('lfi&rfi', '\\u00[a-f0-9]{2}', 'Octal entity', '7'),
+	              ('lfi&rfi', '\\\u00[a-f0-9]{2}', 'Octal entity', '7'),
                   ('lfi&rfi', '\/\/input', 'PHP input stream', '8'),
                   ('lfi&rfi', 'call_user_func .*?\(.+?\)', 'Critical PHP function call_user_func', '10'),
                   ('lfi&rfi', 'create_function .*?\(.+?\)', 'Critical PHP function call_user_func', '10'),
@@ -90,10 +90,11 @@ def create_tables():
 				('ci', 'shell_exec\(.*\)', 'function execute commands', '14'),
 				('sc', 'setcookie\(.*\)', 'Initialize cookie', '15'),
 				('sc', 'session_set_cookie_params', 'parameters cookie', '15'),
-				('pt', '\.\.[\/\\]', 'Directory traversal', '16'),
+				('pt', '\.\.[\/\\\]', 'Directory traversal', '16'),
 				('pt', '%(c0\.|af\.|5c\.)', 'Directory traversal unicode urlencoding', '16'),
-				('pt', '%2e%2e[\/\\]', 'Directory traversal urlencoding', '16'),
-				('pt', '%c0%ae[\/\\]', 'Directory traversal unicode urlencoding', '16'),]
+				('pt', '%2e%2e[\/\\\]', 'Directory traversal urlencoding', '16'),
+				('pt', '%c0%ae[\/\\\]', 'Directory traversal unicode urlencoding', '16')
+				]
 
 	connection= sqlite3.connect("Fraudatanalyzer.db")
 
