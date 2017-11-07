@@ -1,0 +1,5 @@
+ID  NAME   			          	FILE                 					LINE                        ALTERNATIVE 
+3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies

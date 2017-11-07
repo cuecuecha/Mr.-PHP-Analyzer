@@ -1,0 +1,103 @@
+ID  NAME   			          	FILE                 					LINE                        ALTERNATIVE 
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/ajax/GetCustomerData.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_double.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_single.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_table.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/recreate_tables.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/json/GetCustomerData.php,|$result = mysql_query( $sql_stm, $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_integer.php,|mysql_connect('localhost', 'username', 'password');|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_single.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/forms/data_receptor.php,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_double.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string_rnd.php,mysql_select_db('database');,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/form_sql_injection.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/form_sql_injection.php,$exceptionstring .= mysql_errno() . ": " . mysql_error();,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/json/GetCustomerData.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_no_results.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_string.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_integer.php,mysql_select_db('database');,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/repeated_parameter_names/repeated_parameter_names.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/forms/data_receptor.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/repeated_parameter_names/repeated_parameter_names.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/sql_injection_string.php,|$result = mysql_query ("SELECT * FROM users where email ='".$_GET['email']."'", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/form_sql_injection.php,|$link = mysql_connect("localhost", "root" , "moth");|,mysqli_()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string_rnd.php,$result = mysql_query($sql);,mysqli_()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_integer.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php,mysql_select_db('database');,mysqli_select_db()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string.php,mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/sql_injection_string.php,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/ajax/GetCustomerData.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_integer.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/sql_injection_string.php,|mysql_select_db ("w3af_test", $link);|,mysqli_()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/form_sql_injection.php,|mysql_select_db ("w3af_test", $link);|,mysqli_select_db()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/form_sql_injection.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_double.php,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/sql_injection_string.php,|$link = mysql_connect ("localhost", "root", "moth");|,mysqli_()
+2,mysql_select_db,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_integer.php,|mysql_select_db("w3af_test", $link);|,mysqli_select_db()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string.php,|$link = mysql_connect("localhost", "root", "moth");|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/forms/data_receptor.php,$num_rows = mysql_num_rows($result);,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/forms/data_receptor.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_integer.php,|mysql_select_db("w3af_test", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string_rnd.php,$username = mysql_escape_string($username);,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_single.php,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_integer.php,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,mysqli_()
+8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/repeated_parameter_names/repeated_parameter_names.php,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysqli_()
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue2", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login-password-only.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login-password-only.php,|setcookie("magicValue2", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/nusoap.php,|function setCookie($name, $value) {|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/class.soapclient.php,|function setCookie($name, $value) {|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/core/cookieFuzzing/cf.php,|setcookie("TestCookie", $value);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+3,sc,/root/php/w3af-moth/webroot/moth/w3af/core/cookie_handler/set-cookie.php,|setcookie("TestCookie", $value);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
+7,ci,/root/php/w3af-moth/webroot/moth/mod_sec_log.php,|exec('tail -n 10 /etc/modsecurity/logs/modsec_debug.log', $output);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,$exploits[] = "d=''+/eval~locat~ion.h~ash.su~bstring(1)/;e=/.(x?.*)~(x?.*)~(x?.*)~(x?.*)~(x?.*)./;f=e.exec(d);g=f[2];h=f[3];i=f[4];j=f[5];k=g+h+i+j;0[''+(f[1])](0[''+(f[1])](k));";,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,$exploits[] = 'EXEC(@stored_proc @param)';,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,633D22687474703A2F2F777777302E646F7568756E716E2E636E2F63737273732F772E6A73223E3C2F7363726970743E3C212D2D272727294645544348204E4558542046524F4D20205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20AS%20CHAR(4000));EXEC(@S);';,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,$test2 = '\%windir%\cmd.exe';,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,$test10 = '&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt;';,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,$exploits[] = 'navigatorurl:test" -chrome "javascript:C=Components.classes;I=Components.interfaces;file=C[\'@mozilla.org/file/local;1\'].createInstance(I.nsILocalFile);file.initWithPath(\'C:\'+String.fromCharCode(92)+String.fromCharCode(92)+\'Windows\'+String.fromCharCode(92)+String.fromCharCode(92)+\'System32\'+String.fromCharCode(92)+String.fromCharCode(92)+\'cmd.exe\');process=C[\'@mozilla.org/process/util;1\'].createInstance(I.nsIProcess);process.init(file);process.run(true%252c{}%252c0);alert(process)';,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php,$exploits[] = 'mailto:%00%00../../../../../../windows/system32/cmd".exe ../../../../../../../../windows/system32/calc.exe " - " blah.bat';,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/lib/IDS/Caching/Database.php,$rows = $handle->query('SELECT created FROM `' .,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/phpids-0.5.4/lib/IDS/Caching/Database.php,$handle->query('TRUNCATE ' .,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/class.soap_transport_http.php,$this->incoming_payload = curl_exec($this->ch);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/nusoap.php,$this->incoming_payload = curl_exec($this->ch);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php,$result = mysql_query($sql);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php,$result = mysql_query($sql);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/xpath/funcs.php,$arts = $xpath->query($querystr);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/xss/xss_filter_7.php,|$str = preg_replace('#(alert||cmd||passthru||eval||exec||expression||system||fopen||fsockopen||file||file_get_contents||readfile||unlink)(\s*)\((.*?)\)#si',|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/xss/security-4ad0fd86e8.php,|$str = preg_replace('#(alert||cmd||passthru||eval||exec||expression||system||fopen||fsockopen||file||file_get_contents||readfile||unlink)(\s*)\((.*?)\)#si',|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/recreate_tables.php,|if (mysql_query("CREATE DATABASE IF NOT EXISTS w3af_test", $link))|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_integer.php,|$result = mysql_query("SELECT * FROM users where id=" . $_GET["id"], $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/form_sql_injection.php,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_table.php,|$result = mysql_query("SELECT * FROM " . $_GET['table'] , $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_no_results.php,|$result = mysql_query("SELECT * FROM users where nombre='" . $_GET["nombre"] . "'", $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/sql_injection/select/sql_injection_string.php,|$result = mysql_query( $sql_stm, $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/hpp/vote-log.php,|$stm = $db->query('SELECT id, votefor, ipaddress from votes ORDER BY id DESC LIMIT 100');|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_integer.php,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/bsqli_string.php,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_single.php,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_integer.php,|$result = mysql_query("SELECT * FROM users where id =" . $_GET['id'] , $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_double.php,|$result = mysql_query('SELECT * FROM users where email ="' . $_GET['email'] .'"', $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/forms/data_receptor.php,|$result = mysql_query("SELECT * FROM users where name ='" . $_POST['user'] ."'", $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/param_osc.php,system ( "cat " . $_GET['param'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/vulnerable.php,system ( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/vulnerable.php,system ( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/simple_osc.php,system ( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/simple_osc.php,system ( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/blind_osc.php,@exec( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/blind_osc.php,@exec( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/passthru.php,passthru( $_GET['cmd'] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/audit/os_commanding/vulnerable2.php,system ( "cat " . $_GET[file] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/fuzzURLParts/config.php,foreach ($dbh->query($sql) as $row) {,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/json/GetCustomerData.php,$oResult = mysql_query($sQuery);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/encoding/euc-jp/vúlnerable.php,system ( $_GET[command] );,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/encoding/utf-8/vúlnerable.php,system ($_GET[command]);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/form_sql_injection.php,|$result = mysql_query("SELECT * FROM users WHERE nombre ='" . $_POST['firstname'] ."'", $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/wml_parser/sql_injection_string.php,|$result = mysql_query( $sql_stm, $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/ajax/GetCustomerData.php,if($oResult = mysql_query($sQuery) and mysql_num_rows($oResult) > 0) {,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/ntlm_auth/ntlm_v2/ntlm.php,$cmd = bin2hex($challenge)." ".bin2hex(ntlm_utf8_to_utf16le(strtoupper($user)))." ".bin2hex(ntlm_utf8_to_utf16le($domain))." ".bin2hex(ntlm_utf8_to_utf16le($workstation))." ".bin2hex($clientblobhash)." ".bin2hex($clientblob);,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/ntlm_auth/ntlm_v2/ntlm.php,return (`$ntlm_verifyntlmpath $cmd` == "1\n");,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+7,ci,/root/php/w3af-moth/webroot/moth/w3af/core/repeated_parameter_names/repeated_parameter_names.php,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
