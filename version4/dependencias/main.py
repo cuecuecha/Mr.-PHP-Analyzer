@@ -5,6 +5,12 @@ import argparse
 import files
 import report
 import csvcreate
+# -*- coding: utf-8 -*-
+__author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
+__copyright__="Copyright 2017, UNAM-CERT"
+__license__="UNAM CERT"
+__version__="1.0"
+__status__="Prototype"
 parser = argparse.ArgumentParser(description='Find vulnerabilities in php code')
 parser.add_argument('-r' , nargs=1,  help="root")
 parser.add_argument('-v' , nargs=1, help="vulnerability")
@@ -25,10 +31,19 @@ if option.r and option.v:
 			report.create_reportlist()
         		report.create_re_funclist()
         		csvcreate.create_report("12")
+	elif option.v[0] is "3":
+		report.create_reportlist()
+		report.create_re_vulist("1")
+		csvcreate.create_report("11")
 	elif option.v[0] is "4":
 		report.create_reportlist()
-                report.create_re_vulist("3")
-                csvcreate.create_report("11")
+	        report.create_re_vulist("3")
+	        csvcreate.create_report("11")
+
+	elif option.v[0] is "5":
+		report.create_reportlist()
+		report.create_re_vulist("4")
+		csvcreate.create_report("11")
 
 	elif option.v[0] is "6":
 		report.create_reportlist()
@@ -47,7 +62,7 @@ if option.r and option.v:
 
 elif option.r:
 	#opciones=["1","2","3","4","5","6","7","8"]
-	prov=["3","7"]
+	prov=["3","4"]
 	files.get_files(option.r[0])
         v=version.get_version()
 	report.create_reportlist()

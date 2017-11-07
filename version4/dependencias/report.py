@@ -13,7 +13,7 @@ class file_report:
 def create_reportlist ():
 	data_report=[]
 	report=[]
-	file = open("/root/mrphpanalyzer/archivos/out", "r") 
+	file = open("../archivos/out", "r") 
         lione = file.readline()
         e=lione.split("/")
 	file.close()
@@ -22,7 +22,7 @@ def create_reportlist ():
 	data_report.append(version.get_version())
 	d=tuple(data_report)
 	report.append(d)
-        connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+        connection= sqlite3.connect("../base/Fraudatanalyzer.db")
 	connection.text_factory=str
         cursor= connection.cursor()
 	cursor.executemany('INSERT INTO reports(name, date_hour, version) VALUES (?,?,?)', report)
@@ -32,7 +32,7 @@ def create_reportlist ():
 	
 #create_reportlist()
 def get_re_now():
-	connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+	connection= sqlite3.connect("../base/Fraudatanalyzer.db")
         cursor= connection.cursor()
 	for e in cursor.execute("SELECT  report_id, MAX(date_hour) FROM reports"):
                 r=list(e)
@@ -53,7 +53,7 @@ def create_re_funclist():
 	funce=fl[1]
 	lineh=[]
 	fileh=[]
-	connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+	connection= sqlite3.connect("../base/Fraudatanalyzer.db")
 	connection.text_factory=str
         cursor= connection.cursor()
 	for o in range(len(funce)):
@@ -97,7 +97,7 @@ def create_re_vulist(vul):
 	id_vul=[]
         linev=[]
         filev=[]
-        connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+        connection= sqlite3.connect("../base/Fraudatanalyzer.db")
 	connection.text_factory=str
         cursor= connection.cursor()
         for ld in range(len(vl)):

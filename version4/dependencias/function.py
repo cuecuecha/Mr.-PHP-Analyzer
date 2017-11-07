@@ -1,6 +1,14 @@
 import re
 import files
 import sqlite3
+
+
+# -*- coding: utf-8 -*-
+__author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
+__copyright__="Copyright 2017, UNAM-CERT"
+__license__="UNAM CERT"
+__version__="1.0"
+__status__="Prototype"
 class function_version:
         pass
 
@@ -16,7 +24,7 @@ def get_function (version):
 	flfil=[]
 	linex=[]
 	fileslist=files.get_listfiles()
-        connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+        connection= sqlite3.connect("../base/Fraudatanalyzer.db")
         cursor= connection.cursor()
 	if version is "4":
         	for e in cursor.execute("SELECT  expression FROM functions WHERE versionob = '%s'" %version):

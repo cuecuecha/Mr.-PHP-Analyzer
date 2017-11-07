@@ -6,7 +6,7 @@ class files():
 
 def get_files (route):
 	#file =[]
-	out = open( "/root/mrphpanalyzer/archivos/out", 'w' )
+	out = open( "../archivos/out", 'w' )
 	for root,directorio,files in os.walk(route):
                 for fl in [a for a in files if a.lower().endswith("php")]:
                         file=(os.path.join(root, fl))
@@ -17,7 +17,7 @@ def get_files (route):
 
 def get_listfiles ():
 	list=[]
-	with open("/root/mrphpanalyzer/archivos/out","r") as s:
+	with open("../archivos/out","r") as s:
                 for line in s.readlines():
                         line = line.strip()
 			list.append(line)

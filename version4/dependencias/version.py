@@ -10,7 +10,7 @@ def open_file (file):
 	table=[]
 	version=["7","5","4"]
 	expression=[]
-	connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+	connection= sqlite3.connect("../base/Fraudatanalyzer.db")
         cursor= connection.cursor()
 	for v in range(len(version)):
         	if version[v] is "7":

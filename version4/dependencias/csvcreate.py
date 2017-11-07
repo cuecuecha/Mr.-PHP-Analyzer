@@ -6,19 +6,19 @@ class open_csv:
 	pass 
 
 def first_line(name,date):
-	fl="/root/mrphpanalyzer/reportes/"+name+"_"+date+'.csv'
+	fl="../reportes/"+name+"_"+date+'.csv'
         r=open(fl, 'w')
         r.write("ID  NAME   			          	FILE                 					LINE                        ALTERNATIVE \n")
         r.close()
 def get_csv(name,date,id,funcob,file,line,alt):
-	fl="/root/mrphpanalyzer/reportes/"+name+"_"+date+'.csv'
+	fl="../reportes/"+name+"_"+date+'.csv'
 	with open(fl, 'a') as csvfile:
 		filewriter = csv.writer(csvfile, delimiter=',',
 	                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
 	    	filewriter.writerow([id, funcob, file, line, alt])
 def get_report_func ():
 	int=[]
-        connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+        connection= sqlite3.connect("../base/Fraudatanalyzer.db")
         cursor= connection.cursor()         
 	for e in cursor.execute('SELECT  MAX(date_hour) FROM reports'):
 		date=e[0]
@@ -31,7 +31,7 @@ def get_report_func ():
 
 def get_report_vul ():
         vit=[]
-        connection= sqlite3.connect("/root/mrphpanalyzer/base/Fraudatanalyzer.db")
+        connection= sqlite3.connect("../base/Fraudatanalyzer.db")
 	connection.text_factory=str
         cursor= connection.cursor() 
 	for e in cursor.execute('SELECT  MAX(date_hour) FROM reports'):
