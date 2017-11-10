@@ -1,4 +1,5 @@
 #!/usr/bin/python
 
-def dixi(dic):
-	print dic.items();
+words = ['cat', 'window', 'defenestrate']
+
+print len(words) 
