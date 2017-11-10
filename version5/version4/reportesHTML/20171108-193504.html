@@ -1,0 +1,886 @@
+
+		<!DOCTYPE html>
+		<html lang="en">
+
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		  <meta name="description" content="">
+		  <meta name="author" content="">
+		  <title>Mr. PHP Analyzer</title>
+		  <!-- Bootstrap core CSS-->
+		  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		  <!-- Custom fonts for this template-->
+		  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		  <!-- Page level plugin CSS-->
+		  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+		  <!-- Custom styles for this template-->
+		  <link href="css/sb-admin.css" rel="stylesheet">
+		  <link href="css/style.css" rel="stylesheet">
+		</head>
+
+		<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+		  <!-- Navigation-->
+		  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		    <a class="navbar-brand" href="index.html">Mr. PHP Analyzer</a>
+		    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+		      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
+		          <a class="nav-link" href="index.html">
+		            <i class="fa fa-fw fa-dashboard"></i>
+		            <span class="nav-link-text">Current Report</span>
+		          </a>
+		        </li>
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
+		          <a class="nav-link" href="history.html">
+		            <i class="fa fa-fw fa-area-chart"></i>
+		            <span class="nav-link-text">History</span>
+		          </a>
+		        </li>
+		      </ul>
+		      <ul class="navbar-nav sidenav-toggler">
+		        <li class="nav-item">
+		          <a class="nav-link text-center" id="sidenavToggler">
+		            <i class="fa fa-fw fa-angle-left"></i>
+		          </a>
+		        </li>
+		      </ul>
+
+		    </div>
+		  </nav>
+		  <div class="content-wrapper">
+		    <div class="container-fluid">
+		      <!-- Breadcrumbs-->
+		      <div class="breadcrumb" style="height: 350px;">
+		        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
+		      </div>
+		   
+		<!-- Icon Cards-->
+		<div class="row">
+			<div class="col-xl-3 col-sm-6 mb-3">
+				<div class="card text-white sqli o-hidden h-100">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-4">
+								<h2 style="text-align:center;">8</h2>
+							</div>
+							<div class="col-md-8">
+								<h2>Session Cookie</h2>
+							</div>
+						</dvi>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+    		
+	<div class="card mb-3">
+	  <div class="card-header">
+	    <i class="fa fa-table"></i>Table of Vulnerabilities</div>
+	  <div class="card-body">
+	    <div class="table-responsive">
+	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <th>ID</th>
+	            <th>Line Number</th>
+	            <th>Affected strings</th>
+	            <th>Path</th>
+	          </tr>
+	        </thead>
+	        <tfoot>
+	          <tr>
+	          <th>ID</th>
+	          <th>Line Number</th>
+	          <th>Affected strings</th>
+	          <th>Path</th>
+	          </tr>
+	        </tfoot>
+	        <tbody>
+	           <tr>
+<td>3</td>
+<td>13</td>
+<td>setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php</td>
+</tr><tr>
+<td>3</td>
+<td>14</td>
+<td>setcookie("magicValue2", "0000-1111-2222-3333-4444", time()+3600);</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php</td>
+</tr><tr>
+<td>3</td>
+<td>16</td>
+<td>setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login-password-only.php</td>
+</tr><tr>
+<td>3</td>
+<td>17</td>
+<td>setcookie("magicValue2", "0000-1111-2222-3333-4444", time()+3600);</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login-password-only.php</td>
+</tr><tr>
+<td>3</td>
+<td>8025</td>
+<td>function setCookie($name, $value) {</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/nusoap.php</td>
+</tr><tr>
+<td>3</td>
+<td>868</td>
+<td>function setCookie($name, $value) {</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/class.soapclient.php</td>
+</tr><tr>
+<td>3</td>
+<td>4</td>
+<td>setcookie("TestCookie", $value);</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/core/cookieFuzzing/cf.php</td>
+</tr><tr>
+<td>3</td>
+<td>4</td>
+<td>setcookie("TestCookie", $value);</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/core/cookie_handler/set-cookie.php</td>
+</tr>
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+	</div>
+
+	
+		<footer class="sticky-footer">
+		  <div class="container">
+		    <div class="text-center">
+		      <small>Copyright © Mr. PHP Analyzer 2017</small>
+		    </div>
+		  </div>
+		</footer>
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top">
+		  <i class="fa fa-angle-up"></i>
+		</a>
+
+		</div>
+		<!-- Bootstrap core JavaScript-->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Core plugin JavaScript-->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Page level plugin JavaScript-->
+		<script src="vendor/chart.js/Chart.min.js"></script>
+		<script src="vendor/datatables/jquery.dataTables.js"></script>
+		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+		<!-- Custom scripts for all pages-->
+		<script src="js/sb-admin.min.js"></script>
+		<!-- Custom scripts for this page-->
+		<script src="js/sb-admin-datatables.min.js"></script>
+	
+		<!DOCTYPE html>
+		<html lang="en">
+
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		  <meta name="description" content="">
+		  <meta name="author" content="">
+		  <title>Mr. PHP Analyzer</title>
+		  <!-- Bootstrap core CSS-->
+		  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		  <!-- Custom fonts for this template-->
+		  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		  <!-- Page level plugin CSS-->
+		  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+		  <!-- Custom styles for this template-->
+		  <link href="css/sb-admin.css" rel="stylesheet">
+		  <link href="css/style.css" rel="stylesheet">
+		</head>
+
+		<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+		  <!-- Navigation-->
+		  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		    <a class="navbar-brand" href="index.html">Mr. PHP Analyzer</a>
+		    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+		      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
+		          <a class="nav-link" href="index.html">
+		            <i class="fa fa-fw fa-dashboard"></i>
+		            <span class="nav-link-text">Current Report</span>
+		          </a>
+		        </li>
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
+		          <a class="nav-link" href="history.html">
+		            <i class="fa fa-fw fa-area-chart"></i>
+		            <span class="nav-link-text">History</span>
+		          </a>
+		        </li>
+		      </ul>
+		      <ul class="navbar-nav sidenav-toggler">
+		        <li class="nav-item">
+		          <a class="nav-link text-center" id="sidenavToggler">
+		            <i class="fa fa-fw fa-angle-left"></i>
+		          </a>
+		        </li>
+		      </ul>
+
+		    </div>
+		  </nav>
+		  <div class="content-wrapper">
+		    <div class="container-fluid">
+		      <!-- Breadcrumbs-->
+		      <div class="breadcrumb" style="height: 350px;">
+		        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
+		      </div>
+		   
+		<!-- Icon Cards-->
+		<div class="row">
+			<div class="col-xl-3 col-sm-6 mb-3">
+				<div class="card text-white sqli o-hidden h-100">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-4">
+								<h2 style="text-align:center;">8</h2>
+							</div>
+							<div class="col-md-8">
+								<h4>Insecure Send Information</h4>
+							</div>
+						</dvi>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+    		
+	<div class="card mb-3">
+	  <div class="card-header">
+	    <i class="fa fa-table"></i>Table of Vulnerabilities</div>
+	  <div class="card-body">
+	    <div class="table-responsive">
+	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <th>ID</th>
+	            <th>Line Number</th>
+	            <th>Affected strings</th>
+	            <th>Path</th>
+	          </tr>
+	        </thead>
+	        <tfoot>
+	          <tr>
+	          <th>ID</th>
+	          <th>Line Number</th>
+	          <th>Affected strings</th>
+	          <th>Path</th>
+	          </tr>
+	        </tfoot>
+	        <tbody>
+	           <tr>
+<td>4</td>
+<td>18</td>
+<td>INSERT INTO `users` ( `username` , `password` ) VALUES ('username', 'password');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php</td>
+</tr><tr>
+<td>4</td>
+<td>19</td>
+<td>INSERT INTO `users` ( `username` , `password` ) VALUES ('tom', 'password');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php</td>
+</tr><tr>
+<td>4</td>
+<td>20</td>
+<td>INSERT INTO `users` ( `username` , `password` ) VALUES ('bill', 'password');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php</td>
+</tr><tr>
+<td>4</td>
+<td>21</td>
+<td>INSERT INTO `users` ( `username` , `password` ) VALUES ('bob', 'password');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/ajax/username-ajax.php</td>
+</tr><tr>
+<td>4</td>
+<td>7</td>
+<td>if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/file_upload/uploader.php</td>
+</tr><tr>
+<td>4</td>
+<td>36</td>
+<td>$preparedStatement = $db->prepare('INSERT INTO votes (votefor, ipaddress) VALUES (:votefor, :ipaddress)');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/hpp/vote.php</td>
+</tr><tr>
+<td>4</td>
+<td>5</td>
+<td>$fh = fopen( $_FILES['uploadedfile']['tmp_name'], 'r');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/core/fuzzFileContent/uploader.php</td>
+</tr><tr>
+<td>4</td>
+<td>6</td>
+<td>$theData = fread($fh, filesize($_FILES['uploadedfile']['tmp_name']));</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/core/fuzzFileContent/uploader.php</td>
+</tr>
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+	</div>
+
+	
+		<footer class="sticky-footer">
+		  <div class="container">
+		    <div class="text-center">
+		      <small>Copyright © Mr. PHP Analyzer 2017</small>
+		    </div>
+		  </div>
+		</footer>
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top">
+		  <i class="fa fa-angle-up"></i>
+		</a>
+
+		</div>
+		<!-- Bootstrap core JavaScript-->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Core plugin JavaScript-->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Page level plugin JavaScript-->
+		<script src="vendor/chart.js/Chart.min.js"></script>
+		<script src="vendor/datatables/jquery.dataTables.js"></script>
+		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+		<!-- Custom scripts for all pages-->
+		<script src="js/sb-admin.min.js"></script>
+		<!-- Custom scripts for this page-->
+		<script src="js/sb-admin-datatables.min.js"></script>
+	
+		<!DOCTYPE html>
+		<html lang="en">
+
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		  <meta name="description" content="">
+		  <meta name="author" content="">
+		  <title>Mr. PHP Analyzer</title>
+		  <!-- Bootstrap core CSS-->
+		  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		  <!-- Custom fonts for this template-->
+		  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		  <!-- Page level plugin CSS-->
+		  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+		  <!-- Custom styles for this template-->
+		  <link href="css/sb-admin.css" rel="stylesheet">
+		  <link href="css/style.css" rel="stylesheet">
+		</head>
+
+		<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+		  <!-- Navigation-->
+		  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		    <a class="navbar-brand" href="index.html">Mr. PHP Analyzer</a>
+		    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+		      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
+		          <a class="nav-link" href="index.html">
+		            <i class="fa fa-fw fa-dashboard"></i>
+		            <span class="nav-link-text">Current Report</span>
+		          </a>
+		        </li>
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
+		          <a class="nav-link" href="history.html">
+		            <i class="fa fa-fw fa-area-chart"></i>
+		            <span class="nav-link-text">History</span>
+		          </a>
+		        </li>
+		      </ul>
+		      <ul class="navbar-nav sidenav-toggler">
+		        <li class="nav-item">
+		          <a class="nav-link text-center" id="sidenavToggler">
+		            <i class="fa fa-fw fa-angle-left"></i>
+		          </a>
+		        </li>
+		      </ul>
+
+		    </div>
+		  </nav>
+		  <div class="content-wrapper">
+		    <div class="container-fluid">
+		      <!-- Breadcrumbs-->
+		      <div class="breadcrumb" style="height: 350px;">
+		        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
+		      </div>
+		   
+		<!-- Icon Cards-->
+		<div class="row">
+			<div class="col-xl-3 col-sm-6 mb-3">
+				<div class="card text-white sqli o-hidden h-100">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-4">
+								<h2 style="text-align:center;">78</h2>
+							</div>
+							<div class="col-md-8">
+								<h3>Path Traversal</h3>
+							</div>
+						</dvi>
+					</div>
+				</div>
+			</div>
+		</div>
+	    	
+	<div class="card mb-3">
+	  <div class="card-header">
+	    <i class="fa fa-table"></i>Table of Vulnerabilities</div>
+	  <div class="card-body">
+	    <div class="table-responsive">
+	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <th>ID</th>
+	            <th>Line Number</th>
+	            <th>Affected strings</th>
+	            <th>Path</th>
+	          </tr>
+	        </thead>
+	        <tfoot>
+	          <tr>
+	          <th>ID</th>
+	          <th>Line Number</th>
+	          <th>Affected strings</th>
+	          <th>Path</th>
+	          </tr>
+	        </tfoot>
+	        <tbody>
+	           <tr>
+<td>6</td>
+<td>23</td>
+<td>. '../lib/'</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/phpids.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>. '../../lib/'</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/docs/examples/example.php</td>
+</tr><tr>
+<td>6</td>
+<td>48</td>
+<td>$init = IDS_Init::init(dirname(__FILE__) . '/../../lib/IDS/Config/Config.ini');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/docs/examples/example.php</td>
+</tr><tr>
+<td>6</td>
+<td>63</td>
+<td>$init->config['General']['base_path'] = dirname(__FILE__) . '/../../lib/IDS/';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/docs/examples/example.php</td>
+</tr><tr>
+<td>6</td>
+<td>27</td>
+<td>PHPUnit_Util_Filter::addDirectoryToFilter(dirname(__FILE__) . '/../lib/IDS/vendors');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/allTests.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/CachingTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>30</td>
+<td>$this->path = dirname(__FILE__) . '/../../lib/IDS/Config/Config.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/CachingTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>55</td>
+<td>$this->init->config['Caching']['path'] =  dirname(__FILE__) . '/../../lib/IDS/tmp/default_filter.cache';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/CachingTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>93</td>
+<td>@unlink(dirname(__FILE__) . '/../../lib/IDS/tmp/default_filter.cache');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/CachingTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>94</td>
+<td>@unlink(dirname(__FILE__) . '/../../lib/IDS/tmp/memcache.timestamp');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/CachingTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/InitTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>29</td>
+<td>$this->path = dirname(__FILE__) . '/../../lib/IDS/Config/Config.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/InitTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>22</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>30</td>
+<td>$path = dirname(__FILE__) . '/../../lib/IDS/Config/Config.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>32</td>
+<td>$this->init->config['General']['filter_path'] = dirname(__FILE__) . '/../../lib/IDS/default_filter.xml';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>33</td>
+<td>$this->init->config['General']['tmp_path'] = dirname(__FILE__) . '/../../lib/IDS/tmp';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>34</td>
+<td>$this->init->config['Caching']['path'] = dirname(__FILE__) . '/../../lib/IDS/tmp/default_filter.cache';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>121</td>
+<td>$this->init->config['General']['filter_path'] = dirname(__FILE__) . '/../../lib/IDS/default_filter.json';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>133</td>
+<td>$this->init->config['General']['filter_path'] = dirname(__FILE__) . '/../../lib/IDS/default_filter.xml';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>889</td>
+<td>$test1 = '../../etc/passwd';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>892</td>
+<td>$test4 = '%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%00';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>893</td>
+<td>$test5 = '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>894</td>
+<td>$test6 = '/%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..winnt/desktop.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>896</td>
+<td>$test8 = '../../../../../../../../../../../../localstart.asp%00';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>897</td>
+<td>$test9 = '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>899</td>
+<td>$test11 = '../../../../../../../../conf/server.xml';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>900</td>
+<td>$test12 = '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>949</td>
+<td>$exploits[] = 'mailto:%00%00../../../../../../windows/system32/cmd".exe ../../../../../../../../windows/system32/calc.exe " - " blah.bat';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>1176</td>
+<td>$this->init->config['General']['HTML_Purifier_Cache'] = dirname(__FILE__) . '/../../lib/IDS/tmp/';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>1212</td>
+<td>$this->init->config['General']['HTML_Purifier_Cache'] = dirname(__FILE__) . '/../../lib/IDS/tmp/';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/MonitorTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/EventTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/ExceptionTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>50</td>
+<td>$this->path = dirname(__FILE__) . '/../../lib/IDS/Config/Config.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/ExceptionTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/FilterTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>29</td>
+<td>$this->path = dirname(__FILE__) . '/../../lib/IDS/Config/Config.ini';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/FilterTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>83</td>
+<td>$this->init->config['General']['filter_path'] = dirname(__FILE__) . '/../../lib/IDS/default_filter.xml';</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/FilterTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>23</td>
+<td>set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/../../lib');</td>
+<td>/root/php/w3af-moth/webroot/moth/phpids-0.5.4/tests/IDS/ReportTest.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/client2.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient5.php</td>
+</tr><tr>
+<td>6</td>
+<td>13</td>
+<td>require_once('../lib/class.wsdlcache.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient5.php</td>
+</tr><tr>
+<td>6</td>
+<td>13</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient10.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/client3.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient9.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/getfile1client.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient3.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient1.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient4.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient15.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient12.php</td>
+</tr><tr>
+<td>6</td>
+<td>13</td>
+<td>require_once('../lib/class.wsdlcache.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient12.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient3b.php</td>
+</tr><tr>
+<td>6</td>
+<td>14</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient11.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient14.php</td>
+</tr><tr>
+<td>6</td>
+<td>13</td>
+<td>require_once('../lib/class.wsdlcache.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient14.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/mimeclient.php</td>
+</tr><tr>
+<td>6</td>
+<td>13</td>
+<td>require_once('../lib/nusoapmime.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/mimeclient.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient2.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/getfile2client.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient7.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient13.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient8.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/client1.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient3c.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/sslclient.php</td>
+</tr><tr>
+<td>6</td>
+<td>12</td>
+<td>require_once('../lib/nusoap.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/samples/wsdlclient6.php</td>
+</tr><tr>
+<td>6</td>
+<td>128</td>
+<td>var $wordlist_file = '../words/words.txt';</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/crawl/find_captcha/securimage.php</td>
+</tr><tr>
+<td>6</td>
+<td>8</td>
+<td>printQueryResult("/articles/article/tags[tag='php' or tag='". $input ."']/../title");</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/xpath/xpath-or.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../referer_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/referer/buy.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/secure-replay-allowed-rnd/buy.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/secure-replay-allowed-rnd/index.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/secure-no-replay-rnd/buy.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/secure-no-replay-rnd/index.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/vulnerable-rnd/buy.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/vulnerable-rnd/index.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/referer-rnd/buy.php</td>
+</tr><tr>
+<td>6</td>
+<td>7</td>
+<td>include('../referer_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/referer-rnd/buy.php</td>
+</tr><tr>
+<td>6</td>
+<td>2</td>
+<td>include('../rnd_lib.php');</td>
+<td>/root/php/w3af-moth/webroot/moth/w3af/audit/csrf/referer-rnd/index.php</td>
+</tr><tr>
+<td>6</td>
+<td>7</td>
+<td>if ($handle = opendir('../')) {</td>
+<td>/root/php/w3af-moth/webroot/default/index.php</td>
+</tr>
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+	</div>
+
+	
+		<footer class="sticky-footer">
+		  <div class="container">
+		    <div class="text-center">
+		      <small>Copyright © Mr. PHP Analyzer 2017</small>
+		    </div>
+		  </div>
+		</footer>
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top">
+		  <i class="fa fa-angle-up"></i>
+		</a>
+
+		</div>
+		<!-- Bootstrap core JavaScript-->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Core plugin JavaScript-->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Page level plugin JavaScript-->
+		<script src="vendor/chart.js/Chart.min.js"></script>
+		<script src="vendor/datatables/jquery.dataTables.js"></script>
+		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+		<!-- Custom scripts for all pages-->
+		<script src="js/sb-admin.min.js"></script>
+		<!-- Custom scripts for this page-->
+		<script src="js/sb-admin-datatables.min.js"></script>
+	
