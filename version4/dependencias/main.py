@@ -62,7 +62,7 @@ if option.r and option.v:
 
 elif option.r:
 	#opciones=["1","2","3","4","5","6","7","8"]
-	prov=["3","4"]
+	prov=["1","3","4"]
 	files.get_files(option.r[0])
         v=version.get_version()
 	report.create_reportlist()

@@ -11,7 +11,8 @@ __status__="Prototype"
 class get_html:
 	pass
 
-def createhtml(id, num, info):
+	
+def headerhtml():
 	ahora = datetime.datetime.today().strftime("%Y%m%d-%H%M%S")
 	nombreArchivo = ahora + '.html'
 	reporte = open('../reportesHTML/'+nombreArchivo,'a')
@@ -141,6 +142,8 @@ def createhtml(id, num, info):
 		        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
 		      </div>
 		   """)
+def createhtml(id, num, info):
+
 	if id == "1":
 	    reporte.write("""  
 		  <!-- Icon Cards-->
