@@ -10,6 +10,7 @@ __version__="1.0"
 __status__="Prototype"
 class get_html:
 	pass
+ahora = time.strftime("%Y%m%d-%H")
 
 def creareporte():
 	print("creando reporte")
@@ -159,7 +160,47 @@ def cardhtml(tvul, reporte):
 
 
 
+def tablefhtml(table,reporte, option):
+	global ahora
+	tob="""
+	<div class="card mb-3" id="tab{}" style="display:none;">
+	  <div class="card-header">
+	    <i class="fa fa-table"></i>Table of Functions Obsoletes</div>
+	  <div class="card-body">
+	    <div class="table-responsive">
+	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <th>File</th>
+	            <th>Function Obsolete</th>
+	            <th>Function Alternative</th>
+	          </tr>
+	        </thead>
+	        <tfoot>
+	          <tr>
+	            <th>File</th>
+	            <th>Function Obsolete</th>
+	            <th>Function Alternative</th>
+	          </tr>
+	        </tfoot>
+	        <tbody>
+	          {}
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	  <div class="card-footer small text-muted">Updated {}</div>
+	</div>
+	
 
+	"""
+
+
+
+	
+	#js = estadisticas.format()
+	reportes = tob.format(option,table,ahora)
+	reporte.write(reportes)
 
 
 def tablehtml(table,reporte, option):
@@ -172,18 +213,16 @@ def tablehtml(table,reporte, option):
 	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 	        <thead>
 	          <tr>
-	            <th>ID</th>
 	            <th>Line Number</th>
-	            <th>Affected strings</th>
 	            <th>Path</th>
+	            <th>Affected strings</th>
 	          </tr>
 	        </thead>
 	        <tfoot>
 	          <tr>
-	          <th>ID</th>
 	          <th>Line Number</th>
-	          <th>Affected strings</th>
 	          <th>Path</th>
+	          <th>Affected strings</th>
 	          </tr>
 	        </tfoot>
 	        <tbody>
@@ -194,7 +233,7 @@ def tablehtml(table,reporte, option):
 	  </div>
 	  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 	</div>
-	</div>
+	
 
 	"""
 
@@ -204,6 +243,8 @@ def tablehtml(table,reporte, option):
 	#js = estadisticas.format()
 	reportes = n.format(option,table)
 	reporte.write(reportes)
+
+
 
 
 
@@ -234,8 +275,9 @@ def footer(reporte):
 		<!-- Custom scripts for all pages-->
 		<script src="js/sb-admin.min.js"></script>
 		<!-- Custom scripts for this page-->
-		<script src="js/sb-admin-datatables.min.js"></script>
 	""")
+
+
 def scriptable(option,reporte):
 	reporte.write("""
 		<script>
@@ -247,5 +289,12 @@ def scriptable(option,reporte):
 					sd%s.style.display = 'none';
 				}
 			}
+			$(document).ready(function() {
+			  $('#dataTable%s').DataTable();
+			});
 		</script>
-		"""%(option,option,option,option,option,option))
+		"""%(option,option,option,option,option,option,option))
+
+
+def numfunc(tnum):
+	return tnum

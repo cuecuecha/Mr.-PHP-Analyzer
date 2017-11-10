@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import csv
 import sqlite3
-
+import generateHtml
 class open_csv:
 	pass 
 
@@ -44,27 +44,60 @@ def get_report_vul ():
         connection.commit()
 
 def create_report(opcion):
+	vulx = " "
+	vuldx = " "
 	if opcion is "10":
 		int=get_report_func()
-		vit=get_report_vul()
 		first_line(int[0][0],int[0][1])
         	for n in range(len(int)):
                 	t=int[n]
                 	get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
+                        vulx += '<tr>\n'
+                        vulx += '<td>'+str(t[4])+'</td>\n'
+                        vulx += '<td>'+str(t[5])+'</td>\n'   
+                        vulx += '<td>'+str(t[6])+'</td>\n</tr>' 
+                generateHtml.tablefhtml(vulx,generateHtml.creareporte(),"obs") 
+                generateHtml.scriptable("obs", generateHtml.creareporte())
+
+		vit=get_report_vul()
 		for n in range(len(vit)):
                 	t=vit[n]
                 	get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
+                        ##vuldx += '<tr>\n'
+	                #vuldx += '<td>'+str(t[2])+'</td>\n'
+	                #vuldx += '<td>'+str(t[4])+'</td>\n'   
+	                #vuldx += '<td>'+str(t[5])+'</td>\n'   
+	                #vuldx += '<td>'+str(t[6])+'</td>\n</tr>\n' 
+	                #option = t[2]
+        	#generateHtml.tablehtml(vuldx,generateHtml.creareporte(),str(option))
+                #generateHtml.scriptable(str(option), generateHtml.creareporte())
 	elif opcion is "11":
 		vit=get_report_vul()
                 first_line(vit[0][0],vit[0][1])
 		for n in range(len(vit)):
                         t=vit[n]
                         get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
+                        #vulx += '<tr>\n'
+	                #vulx += '<td>'+str(t[2])+'</td>\n'
+	                #vulx += '<td>'+str(t[4])+'</td>\n'   
+	                #vulx += '<td>'+str(t[5])+'</td>\n'   
+	                #vulx += '<td>'+str(t[6])+'</td>\n</tr>' 
+	                #option = t[2]
+        	#generateHtml.tablehtml(vulx,generateHtml.creareporte(),str(option)) 
+                #generateHtml.scriptable(str(option), generateHtml.creareporte())
 	elif opcion is "12":
 		int=get_report_func()
 		first_line(int[0][0],int[0][1])
                 for n in range(len(int)):
                         t=int[n]
                         get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
+                        vulx += '<tr>\n'
+                        vulx += '<td>'+str(t[3])+'</td>\n'
+                        vulx += '<td>'+str(t[4])+'</td>\n'   
+                        vulx += '<td>'+str(t[2])+'</td>\n'   
+                        vulx += '<td>'+str(t[5])+'</td>\n</tr>' 
+
+        generateHtml.tablefhtml(vulx,generateHtml.creareporte(),"obs") 
+        generateHtml.scriptable("obs", generateHtml.creareporte())
 #create_report("12")
 

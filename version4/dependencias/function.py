@@ -1,7 +1,7 @@
 import re
 import files
 import sqlite3
-
+import generateHtml
 
 # -*- coding: utf-8 -*-
 __author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
@@ -23,6 +23,7 @@ def get_function (version):
 	fil=[]
 	flfil=[]
 	linex=[]
+	lnum = 0
 	fileslist=files.get_listfiles()
         connection= sqlite3.connect("../base/Fraudatanalyzer.db")
         cursor= connection.cursor()
@@ -44,9 +45,29 @@ def get_function (version):
                                 for x in range(len(expression)):
                                 	if re.match(expression[x] , line):
                                         	fl.append(line)
+                                        	lnum = lnum + 1
 						fil.append(file)
 			          		table.append(expression[x])
-
+			          		
+	tvulf = ""
+	tvulf+='<div class="row">\n'
+	tvulf+='  <div class="col-xl-3 col-sm-6 mb-3">\n'
+	tvulf+='    <div class="card text-white sqli o-hidden h-100" id="obs" onclick="idobs()">\n'
+	tvulf+='       <div class="card-body">\n'
+	tvulf+='          <div class="row">\n'
+	tvulf+='              <div class="col-md-4">\n'
+	tvulf+='                 <h2 style="text-align:center;">'+str(lnum)+'</h2>\n'
+	tvulf+='              </div>\n'
+	tvulf+='          <div class="col-md-8">\n'
+	tvulf+='		<h2>Function Obsolete</h2>\n' 
+	tvulf+='          </div>\n'
+	tvulf+='        </dvi>\n'
+	tvulf+='     </div>\n'
+	tvulf+='  </div>\n'
+	tvulf+='</div>\n'
+	tvulf+='</div>\n'
+	tvulf+='</div>\n'
+	generateHtml.cardhtml(tvulf, generateHtml.creareporte())          		
 	for f, l in zip(fl, fil):
                 flfil.append("%s\n%s" % (f, l))
 	linex.append(flfil)

@@ -22,9 +22,11 @@ if option.r and option.v:
 	files.get_files(option.r[0])
 	v=version.get_version()
 	if option.v[0] is "1":
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
 		report.create_re_vulist("1")
 		csvcreate.create_report("11")
+		generateHtml.footer(generateHtml.creareporte())	
 	elif option.v[0] is "2":
 		report.create_reportlist()
 		report.create_re_vulist("2")
@@ -57,9 +59,11 @@ if option.r and option.v:
 		if v is "7":
 			print"Didn't find obsolete functions"    	
 		else:
+        		generateHtml.headerhtml(generateHtml.creareporte())
 			report.create_reportlist()
         		report.create_re_funclist()
         		csvcreate.create_report("12")
+        		generateHtml.footer(generateHtml.creareporte())	
 
 elif option.r:
 	#opciones=["1","2","3","4","5","6","7","8"]
