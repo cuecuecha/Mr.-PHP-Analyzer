@@ -9,6 +9,7 @@ __status__="Prototype"
 import re
 import files
 import sqlite3
+import generateHtml
 
 class function_version:
         pass
@@ -23,6 +24,7 @@ def get_function (version):
 	fil=[]
 	flfil=[]
 	linex=[]
+	lnum = 0
 	fileslist=files.get_listfiles()
         connection= sqlite3.connect("/opt/mrphpanalyzer/base/Fraudatanalyzer.db")
         cursor= connection.cursor()
@@ -45,7 +47,28 @@ def get_function (version):
                                 	if re.match(expression[x] , line): #if regular expression to match with line, it add expression, line and file to differents list
                                         	fl.append(line)
 						fil.append(file)
+						lnum = lnum + 1
 			          		table.append(expression[x])
+	tvulf = ""
+	tvulf+='<div class="row">\n'
+	tvulf+='  <div class="col-xl-3 col-sm-6 mb-3">\n'
+	tvulf+='    <div class="card text-white sqli o-hidden h-100" id="obs" onclick="idobs()">\n'
+	tvulf+='       <div class="card-body">\n'
+	tvulf+='          <div class="row">\n'
+	tvulf+='              <div class="col-md-4">\n'
+	tvulf+='                 <h2 style="text-align:center;">'+str(lnum)+'</h2>\n'
+	tvulf+='              </div>\n'
+	tvulf+='          <div class="col-md-8">\n'
+	tvulf+='		<h2>Function Obsolete</h2>\n' 
+	tvulf+='          </div>\n'
+	tvulf+='        </dvi>\n'
+	tvulf+='     </div>\n'
+	tvulf+='  </div>\n'
+	tvulf+='</div>\n'
+	tvulf+='</div>\n'
+	tvulf+='</div>\n'
+	generateHtml.cardhtml(tvulf, generateHtml.creareporte())  #create card 
+        generateHtml.scriptsearchtable("9")     #create script 
 
 	for f, l in zip(fl, fil): #it join fl and fil then the result  add to linex
                 flfil.append("%s\n-n%s" % (f, l))

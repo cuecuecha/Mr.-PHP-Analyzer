@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import csv
 import sqlite3
+import generateHtml
 import os
 class open_csv:
 	pass 
@@ -34,7 +35,7 @@ def get_report_func ():
 
 def get_report_vul ():
         vit=[]
-        connection= sqlite3.connect("opt/mrphpanalyzer/base/Fraudatanalyzer.db")
+        connection= sqlite3.connect("/opt/mrphpanalyzer/base/Fraudatanalyzer.db")
 	connection.text_factory=str
         cursor= connection.cursor() 
 	for e in cursor.execute('SELECT  MAX(date_hour) FROM reports'):
@@ -46,6 +47,8 @@ def get_report_vul ():
         connection.commit()
 
 def create_report(opcion):
+        vulx = " "
+        vuldx = " "
 	if opcion is "10":
 		int=get_report_func()
 		vit=get_report_vul()
@@ -53,6 +56,12 @@ def create_report(opcion):
         	for n in range(len(int)):
                 	t=int[n]
                 	get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
+                        vulx += '<tr>\n'
+                        vulx += '<td>'+str(t[4])+'</td>\n'
+                        vulx += '<td>'+str(t[5])+'</td>\n'   
+                        vulx += '<td>'+str(t[6])+'</td>\n</tr>' 
+                generateHtml.tablefhtml(vulx,generateHtml.creareporte(),"obs") 
+                generateHtml.scriptable("obs", generateHtml.creareporte())
 		for n in range(len(vit)):
                 	t=vit[n]
                 	get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
@@ -68,5 +77,11 @@ def create_report(opcion):
                 for n in range(len(int)):
                         t=int[n]
                         get_csv(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
-#create_report("12")
+                        vulx += '<tr>\n'
+                        vulx += '<td>'+str(t[3])+'</td>\n'
+                        vulx += '<td>'+str(t[4])+'</td>\n'   
+                        vulx += '<td>'+str(t[2])+'</td>\n'   
+                        vulx += '<td>'+str(t[5])+'</td>\n</tr>' 
+	        generateHtml.tablefhtml(vulx,generateHtml.creareporte(),"obs") 
+	        generateHtml.scriptable("obs", generateHtml.creareporte())
 

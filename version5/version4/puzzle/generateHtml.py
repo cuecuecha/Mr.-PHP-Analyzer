@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from webbrowser import open_new_tab
-import datetime
+import time
 # -*- coding: utf-8 -*-
 __author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
 __copyright__="Copyright 2017, UNAM-CERT"
@@ -10,75 +10,19 @@ __version__="1.0"
 __status__="Prototype"
 class get_html:
 	pass
+ahora = time.strftime("%Y%m%d-%H")
 
-def createhtml(id, num, info):
-	ahora = datetime.datetime.today().strftime("%Y%m%d-%H%M%S")
+#funcion para crear reporte
+def creareporte():
+	ahora = time.strftime("%Y%m%d-%H")
 	nombreArchivo = ahora + '.html'
 	reporte = open('/opt/mrphpanalyzer/reportesHTML/'+nombreArchivo,'a')
-	
-	estadisticas = '''
-		// Chart.js scripts
-		// -- Set new default font family and font color to mimic Bootstrap's default styling
-		Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-		Chart.defaults.global.defaultFontColor = '#292b2c';
-		// -- Area Chart Example
+	return reporte
 
-		// -- Bar Chart Example
-		var ctx = document.getElementById("myBarChart");
-		var myLineChart = new Chart(ctx, {
-		  type: 'bar',
-		  data: {
-		    labels: ["SQLi", "XSS", "GDCS", "M. inseguros", "F. Depreciadas", "LFI y RFI","P. Traversal", "I. Comandos","I. Código"],
-		    datasets: [{
-		      label: "Revenue",
-		      backgroundColor: "rgba(2,117,216,1)",
-		      borderColor: "rgba(2,117,216,1)",
-		      data: [4215, 5312, 6251, 7841, 9821, 14984],
-		    }],
-		  },
-		  options: {
-		    scales: {
-		      xAxes: [{
-		        time: {
-		          unit: 'unit'
-		        },
-		        gridLines: {
-		          display: false
-		        },
-		        ticks: {
-		          maxTicksLimit: 15
-		        }
-		      }],
-		      yAxes: [{
-		        ticks: {
-		          min: 0,
-		          max: 15000,
-		          maxTicksLimit: 5
-		        },
-		        gridLines: {
-		          display: true
-		        }
-		      }],
-		    },
-		    legend: {
-		      display: false
-		    }
-		  }
-		});
-		// -- Pie Chart Example
-		var ctx = document.getElementById("myPieChart");
-		var myPieChart = new Chart(ctx, {
-		  type: 'pie',
-		  data: {
-		    labels: ["SQLi", "XSS", "GDCS", "M. inseguros", "F. Depreciadas", "LFI y RFI","P. Traversal", "I. Comandos","I. Código"],
-		    datasets: [{
-		      data: [12.21, 15.58, 11.25, 8.32],
-		      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
-		    }],
-		  },
-		});
-
-	'''
+#funcion donde se crea sólo el header del reporte
+def headerhtml(reporte):
+	ahora = time.strftime("%Y%m%d-%H")
+	nombreArchivo = ahora + '.html'
 
 	reporte.write ("""
 		<!DOCTYPE html>
@@ -112,7 +56,7 @@ def createhtml(id, num, info):
 		    <div class="collapse navbar-collapse" id="navbarResponsive">
 		      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
-		          <a class="nav-link" href="index.html">
+		          <a class="nav-link" href="#">
 		            <i class="fa fa-fw fa-dashboard"></i>
 		            <span class="nav-link-text">Current Report</span>
 		          </a>
@@ -141,199 +85,184 @@ def createhtml(id, num, info):
 		        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
 		      </div>
 		   """)
-	if id == "1":
-	    reporte.write("""  
-		  <!-- Icon Cards-->
-		  <!-- Icon Cards-->
-		  <div class="row">
-		  	<div class="col-xl-3 col-sm-6 mb-3">
-		  		<div class="card text-white sqli o-hidden h-100">
-		  			<div class="card-body">
-		  				<div class="row">
-		  					<div class="col-md-4">
-		  						<h2 style="text-align:center;">%s</h2>
-		  					</div>
-		  					<div class="col-md-8">
-		  						<h2>SQLi</h2>
-		  					</div>
-		  				</dvi>
-		  			</div>
-		  		</div>
-		  	</div>
+
+#funcion donde sea crea el canvas de las gráficas
+def graphic(reporte):
+	reporte.write("""
+		<div class="row">
+		  <div class="col-lg-8">
+		    <!-- Example Bar Chart Card-->
+		    <div class="card mb-3">
+		      <div class="card-header">
+		        <i class="fa fa-bar-chart"></i> Vulnerabilities</div>
+		      <div class="card-body">
+		        <div class="row">
+		          
+		            <canvas id="myBarChart" width="100" height="50"></canvas>
+		          
+
+		        </div>
+		      </div>
+		      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+		    </div>
+		    <!-- Card Columns Example Social Feed-->
+		    
 		  </div>
-		"""%num)
-	elif id == "2":
-		reporte.write("""  
-		  <!-- Icon Cards-->
-		  <!-- Icon Cards-->
-		  <div class="row">
-		  	<div class="col-xl-3 col-sm-6 mb-3">
-		  		<div class="card text-white sqli o-hidden h-100">
-		  			<div class="card-body">
-		  				<div class="row">
-		  					<div class="col-md-4">
-		  						<h2 style="text-align:center;">%s</h2>
-		  					</div>
-		  					<div class="col-md-8">
-		  						<h2>XSS</h2>
-		  					</div>
-		  				</dvi>
-		  			</div>
-		  		</div>
-		  	</div>
+		  <div class="col-lg-4">
+		    <!-- Example Pie Chart Card-->
+		    <div class="card mb-3">
+		      <div class="card-header">
+		        <i class="fa fa-pie-chart"></i>Stadistics</div>
+		      <div class="card-body">
+		        <canvas id="myPieChart" width="100%" height="150"></canvas>
+		      </div>
+		      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+		    </div>
 		  </div>
-		"""%num)
-	elif id == "3":
-		reporte.write("""
-		<!-- Icon Cards-->
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 mb-3">
-				<div class="card text-white sqli o-hidden h-100">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<h2 style="text-align:center;">%s</h2>
-							</div>
-							<div class="col-md-8">
-								<h2>Session Cookie</h2>
-							</div>
-						</dvi>
-					</div>
-				</div>
-			</div>
 		</div>
-		
+		""")
 
-    		"""%num)
-	elif id == "4":
-		reporte.write("""
-		<!-- Icon Cards-->
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 mb-3">
-				<div class="card text-white sqli o-hidden h-100">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<h2 style="text-align:center;">%s</h2>
-							</div>
-							<div class="col-md-8">
-								<h4>Insecure Send Information</h4>
-							</div>
-						</dvi>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+#funcion donde reune los datos para la gráficas
 
-    		"""%num)
-	elif id == "5":
-		reporte.write("""
-		<!-- Icon Cards-->
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 mb-3">
-				<div class="card text-white sqli o-hidden h-100">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<h2 style="text-align:center;">%s</h2>
-							</div>
-							<div class="col-md-8">
-								<h2>LFI&RFI</h2>
-							</div>
-						</dvi>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-    		"""%num)
-	elif id == "6":
-		reporte.write("""
-		<!-- Icon Cards-->
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 mb-3">
-				<div class="card text-white sqli o-hidden h-100">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<h2 style="text-align:center;">%s</h2>
-							</div>
-							<div class="col-md-8">
-								<h3>Path Traversal</h3>
-							</div>
-						</dvi>
-					</div>
-				</div>
-			</div>
-		</div>
-	    	"""%num)
+def jsgraphic(vulnes):
+	reporte = open('/opt/mrphpanalyzer/reportesHTML/js/sb-admin-charts.js','w')
+	
+	reporte.write("""
+		// Chart.js scripts
+		// -- Set new default font family and font color to mimic Bootstrap's default styling
+		Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+		Chart.defaults.global.defaultFontColor = '#292b2c';
+		// -- Area Chart Example
 
-	elif id == "7":
-		reporte.write("""
-		<!-- Icon Cards-->
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 mb-3">
-				<div class="card text-white sqli o-hidden h-100">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<h2 style="text-align:center;">%s</h2>
-							</div>
-							<div class="col-md-8">
-								<h3>Command Injection</h3>
-							</div>
-						</dvi>
-					</div>
-				</div>
-			</div>
-		</div>
+		// -- Bar Chart Example
+		var ctx = document.getElementById("myBarChart");
+		var myLineChart = new Chart(ctx, {
+		  type: 'bar',
+		  data: {
+		    labels: ["SQLi", "XSS", "Session Cookie", "Send S. Info", "LFI&RFI", "P. Traversal", "I. Comandos","I. Código"],
+		    datasets: [{
+		      label: "Revenue",
+		      backgroundColor: "rgba(2,117,216,1)",
+		      borderColor: "rgba(2,117,216,1)",
+		      data: [%s, 0, %s, 41, 21, 4, 0, 0],
+		    }],
+		  },
+		  options: {
+		    scales: {
+		      xAxes: [{
+		        time: {
+		          unit: 'unit'
+		        },
+		        gridLines: {
+		          display: false
+		        },
+		        ticks: {
+		          maxTicksLimit: 15
+		        }
+		      }],
+		      yAxes: [{
+		        ticks: {
+		          min: 0,
+		          max: 200,
+		          maxTicksLimit: 5
+		        },
+		        gridLines: {
+		          display: true
+		        }
+		      }],
+		    },
+		    legend: {
+		      display: false
+		    }
+		  }
+		});
+		// -- Pie Chart Example
+		var ctx = document.getElementById("myPieChart");
+		var myPieChart = new Chart(ctx, {
+		  type: 'pie',
+		  data: {
+		    labels: ["SQLi", "XSS", "Session Cookie", "Send S. Info", "LFI&RFI", "P. Traversal", "I. Comandos","I. Código"],
+		    datasets: [{
+		      data: [%s, 0,%s, 0,0,0,0,0],
+		      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+		    }],
+		  },
+		});
+	"""%(str(vulnes.get('1')), str(vulnes.get('3')),
+		 str(vulnes.get('1')), str(vulnes.get('3'))
+		) )
 
-    	"""%num)
-	elif id == "8":
-		reporte.write("""
-		<!-- Icon Cards-->
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 mb-3">
-				<div class="card text-white sqli o-hidden h-100">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<h2 style="text-align:center;">%s</h2>
-							</div>
-							<div class="col-md-8">
-								<h4>IFC</h4>
-							</div>
-						</dvi>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+#funcion donde imprime el total de cada vulnerabilidad
+def cardhtml(tvul, reporte):
+	reporte.write("""
+		%s
+		"""%tvul)
 
-    	"""%num)
 
-	n="""
-	<div class="card mb-3">
+#funcion para crearl la tabla de funcions obsoletas
+def tablefhtml(table,reporte, option):
+	tob="""
+	<div class="card mb-3" id="tab{}" style="display:none;">
 	  <div class="card-header">
-	    <i class="fa fa-table"></i>Table of Vulnerabilities</div>
+	    <i class="fa fa-table"></i>Table of Functions Obsoletes</div>
 	  <div class="card-body">
 	    <div class="table-responsive">
-	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	      <table class="table table-bordered" id="dataTable9" width="100%" cellspacing="0">
 	        <thead>
 	          <tr>
-	            <th>ID</th>
-	            <th>Line Number</th>
-	            <th>Affected strings</th>
-	            <th>Path</th>
+	            <th>File</th>
+	            <th>Function Obsolete</th>
+	            <th>Function Alternative</th>
 	          </tr>
 	        </thead>
 	        <tfoot>
 	          <tr>
-	          <th>ID</th>
+	            <th>File</th>
+	            <th>Function Obsolete</th>
+	            <th>Function Alternative</th>
+	          </tr>
+	        </tfoot>
+	        <tbody>
+	          {}
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	  <div class="card-footer small text-muted">Updated {}</div>
+	</div>
+	
+
+	"""
+
+
+
+	
+	#js = estadisticas.format()
+	reportes = tob.format(option,table,ahora)
+	reporte.write(reportes)
+
+
+#funcion para crear la tabla de cada vulnerabilidad
+def tablehtml(table,reporte, option):
+	n="""
+	<div class="card mb-3" id="tab{}" style="display:none;">
+	  <div class="card-header">
+	    <i class="fa fa-table"></i>Table of Vulnerabilities</div>
+	  <div class="card-body">
+	    <div class="table-responsive">
+	      <table class="table table-bordered" id="dataTable{}" width="100%" cellspacing="0">
+	        <thead>
+	          <tr>
+	            <th>Line Number</th>
+	            <th>Path</th>
+	            <th>Affected strings</th>
+	          </tr>
+	        </thead>
+	        <tfoot>
+	          <tr>
 	          <th>Line Number</th>
-	          <th>Affected strings</th>
 	          <th>Path</th>
+	          <th>Affected strings</th>
 	          </tr>
 	        </tfoot>
 	        <tbody>
@@ -344,6 +273,7 @@ def createhtml(id, num, info):
 	  </div>
 	  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 	</div>
+	
 
 	"""
 
@@ -351,10 +281,14 @@ def createhtml(id, num, info):
 
 	
 	#js = estadisticas.format()
-	reportes = n.format(info)
+	reportes = n.format(option,option,table)
 	reporte.write(reportes)
-	#f.close()
 
+
+
+
+
+def footer(reporte):
 	reporte.write("""
 		<footer class="sticky-footer">
 		  <div class="container">
@@ -380,9 +314,37 @@ def createhtml(id, num, info):
 		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 		<!-- Custom scripts for all pages-->
 		<script src="js/sb-admin.min.js"></script>
-		<!-- Custom scripts for this page-->
-		<script src="js/sb-admin-datatables.min.js"></script>
+		<script src="js/sb-admin-charts.js"></script>
+		<script src="js/sb-admin-tables.js"></script>
 	""")
 
 
+def scriptable(option,reporte):
+	reporte.write("""
+		<script>
+			var sd%s = document.getElementById('tab%s');
+			function id%s() {
+			if (sd%s.style.display === 'none') {
+				sd%s.style.display = 'block';
+				}else {
+					sd%s.style.display = 'none';
+				}
+			}
 
+		</script>
+		"""%(option,option,option,option,option,option))
+
+
+def scriptsearchtable(option):
+	reporte = open('/opt/mrphpanalyzer/reportesHTML/js/sb-admin-tables.js','a')
+	reporte.write("""
+			$(document).ready(function() {
+			  $('#dataTable%s').DataTable();
+			});
+		"""%option)
+
+
+def escribereporte(reporte, info):
+	reporte.write("""
+		%s
+		"""%info)

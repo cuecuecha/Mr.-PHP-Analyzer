@@ -5,6 +5,8 @@ import argparse
 import files
 import report
 import csvcreate
+import vulnerability
+import generateHtml
 # -*- coding: utf-8 -*-
 __author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
 __copyright__="Copyright 2017, UNAM-CERT"
@@ -21,58 +23,65 @@ if option.r and option.v:
 	files.get_files(option.r[0])
 	v=version.get_version()
 	if option.v[0] is "1":
-		report.create_reportlist()
-		report.create_re_vulist("2")
-		csvcreate.create_report("11")			
-	elif option.v[0] is "2":
-		if v is "7":
-			print"Didn't find obsolete functions"    	
-		else:
-			report.create_reportlist()
-        		report.create_re_funclist()
-        		csvcreate.create_report("12")
-	elif option.v[0] is "3":
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
 		report.create_re_vulist("1")
 		csvcreate.create_report("11")
-	elif option.v[0] is "4":
+		generateHtml.footer(generateHtml.creareporte())	
+	elif option.v[0] is "2":
+		report.create_reportlist()
+		report.create_re_vulist("2")
+		csvcreate.create_report("11")			
+	elif option.v[0] is "3":
 		report.create_reportlist()
 	        report.create_re_vulist("3")
 	        csvcreate.create_report("11")
 
-	elif option.v[0] is "5":
+	elif option.v[0] is "4":
 		report.create_reportlist()
 		report.create_re_vulist("4")
 		csvcreate.create_report("11")
 
-	elif option.v[0] is "6":
+	elif option.v[0] is "5":
 		report.create_reportlist()
                 report.create_re_vulist("5")
                 csvcreate.create_report("11")
 
-	elif option.v[0] is "7":
+	elif option.v[0] is "6":
 		report.create_reportlist()
                 report.create_re_vulist("6")
                 csvcreate.create_report("11")
 
-	elif option.v[0] is "8":
+	elif option.v[0] is "7":
 		report.create_reportlist()
                 report.create_re_vulist("7")
                 csvcreate.create_report("11")
+	elif option.v[0] is "9":
+		if v is "7":
+			print"Didn't find obsolete functions"    	
+		else:
+        		generateHtml.headerhtml(generateHtml.creareporte())
+			report.create_reportlist()
+        		report.create_re_funclist()
+        		csvcreate.create_report("12")
+        		generateHtml.footer(generateHtml.creareporte())	
 
 elif option.r:
-	#opciones=["1","2","3","4","5","6","7","8"]
-	prov=["1","3","4","6","7"]
+	generateHtml.headerhtml(generateHtml.creareporte())
+	generateHtml.graphic(generateHtml.creareporte())
+	prov=["1","3"]
 	files.get_files(option.r[0])
         v=version.get_version()
 	report.create_reportlist()
+	for o in range(len(prov)):
+        	report.create_re_vulist(prov[o])
 	if v is "7":
         	print"Didn't find obsolete functions"           
        	else:
 		report.create_re_funclist()
-	for o in range(len(prov)):
-        	report.create_re_vulist(prov[o])
-	csvcreate.create_report("10")	
+	csvcreate.create_report("10")
+	generateHtml.footer(generateHtml.creareporte())
+			
 
 if option.sos:
         print '''
@@ -81,15 +90,15 @@ if option.sos:
 
                 Options:
 
-                1. XSS
-                2. OBSOLETE FUNCTIONS
-		3. SQLi
-		4. SESSION'S COOKIES
-		5. SEND SENSIBLE INFORMATION
-		6. LFI & RFI
-		7. PATH TRAVERSAL
-		8. COMMAND INJECTION
-		9. SOURCE CODE INJECTION
+		1. SQLi
+                2. XSS
+		3. SESSION'S COOKIES
+		4. SEND SENSIBLE INFORMATION
+		5. LFI & RFI
+		6. PATH TRAVERSAL
+		7. COMMAND INJECTION
+		8. SOURCE CODE INJECTION
+                9. OBSOLETE FUNCTIONS
 		
         '''
 
