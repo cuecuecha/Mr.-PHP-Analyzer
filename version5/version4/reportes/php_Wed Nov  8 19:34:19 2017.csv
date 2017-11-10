@@ -1,2 +1,0 @@
-ID  NAME   			          	FILE                 					LINE                        ALTERNATIVE 
-1,sqli,/root/php/w3af-moth/webroot/moth/w3af/core/repeated_parameter_names/repeated_parameter_names.php,|$result = mysql_query("SELECT * FROM users where id=" . $ids[0], $link);|,http://phpsecurity.readthedocs.io/en/latest/Injection-Attacks.html#command-injection

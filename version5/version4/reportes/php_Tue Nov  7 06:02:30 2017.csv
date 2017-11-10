@@ -1,2 +1,0 @@
-ID  NAME   			          	FILE                 					LINE                        ALTERNATIVE 
-8,mysql_(),/root/php/w3af-moth/webroot/moth/w3af/core/repeated_parameter_names/repeated_parameter_names.php,|$result = mysql_query("SELECT * FROM users where email ='" . $_GET['email'] ."'", $link);|,mysqli_()

@@ -14,7 +14,7 @@ class get_html:
 def createhtml(id, num, info):
 	ahora = datetime.datetime.today().strftime("%Y%m%d-%H%M%S")
 	nombreArchivo = ahora + '.html'
-	reporte = open('../reportesHTML/'+nombreArchivo,'a')
+	reporte = open('/opt/mrphpanalyzer/reportesHTML/'+nombreArchivo,'a')
 	
 	estadisticas = '''
 		// Chart.js scripts
