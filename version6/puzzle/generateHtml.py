@@ -144,7 +144,7 @@ def jsgraphic(vulnes):
 		      label: "Revenue",
 		      backgroundColor: "rgba(2,117,216,1)",
 		      borderColor: "rgba(2,117,216,1)",
-		      data: [%s, 0, %s, 41, 21, 4, 0, 0],
+		      data: [%s, %s, %s, %s, %s, %s, %s, %s],
 		    }],
 		  },
 		  options: {
@@ -183,13 +183,15 @@ def jsgraphic(vulnes):
 		  data: {
 		    labels: ["SQLi", "XSS", "Session Cookie", "Send S. Info", "LFI&RFI", "P. Traversal", "I. Comandos","I. Código"],
 		    datasets: [{
-		      data: [%s, 0,%s, 0,0,0,0,0],
-		      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+		      data: [%s, %s,%s, %s,%s,%s,%s,%s],
+		      backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#007bff', '#dc3545', '#ffc107', '#28a745'],
 		    }],
 		  },
 		});
-	"""%(str(vulnes.get('1')), str(vulnes.get('3')),
-		 str(vulnes.get('1')), str(vulnes.get('3'))
+	"""%(str(vulnes.get('1')),str(vulnes.get('2')), str(vulnes.get('3')),str(vulnes.get('4')),str(vulnes.get('5')),
+		str(vulnes.get('6')),str(vulnes.get('7')),str(vulnes.get('8')),
+		str(vulnes.get('1')),str(vulnes.get('2')), str(vulnes.get('3')),str(vulnes.get('4')),str(vulnes.get('5')),
+		str(vulnes.get('6')),str(vulnes.get('7')),str(vulnes.get('8'))
 		) )
 
 #funcion donde imprime el total de cada vulnerabilidad

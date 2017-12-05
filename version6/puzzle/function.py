@@ -51,7 +51,7 @@ def get_function (version):
 			          		table.append(expression[x])
 	tvulf = ""
 	tvulf+='<div class="row">\n'
-	tvulf+='  <div class="col-xl-3 col-sm-6 mb-3">\n'
+	tvulf+='  <div class="col-xl-5 col-sm-6 mb-3">\n'
 	tvulf+='    <div class="card text-white sqli o-hidden h-100" id="obs" onclick="idobs()">\n'
 	tvulf+='       <div class="card-body">\n'
 	tvulf+='          <div class="row">\n'

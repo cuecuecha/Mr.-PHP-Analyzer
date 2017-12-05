@@ -69,7 +69,7 @@ if option.r and option.v: #if option.r and option.v have some value, it will run
 elif option.r: #if option.r has some value but option.v does not have, it will run functions of all vulnerabilities  
 	generateHtml.headerhtml(generateHtml.creareporte())
 	generateHtml.graphic(generateHtml.creareporte())
-	prov=["1","3"]
+	prov=["1","2","3","4","5","6","7","8"]
 	files.get_files(option.r[0])
         v=version.get_version()
 	report.create_reportlist()
