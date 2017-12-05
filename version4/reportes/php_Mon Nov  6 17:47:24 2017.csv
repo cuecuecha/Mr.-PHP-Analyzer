@@ -1,2 +1,0 @@
-ID  NAME   			          	FILE                 					LINE                        ALTERNATIVE 
-8,mysql_(),php/w3af-moth/webroot/moth/w3af/audit/blind_sql_injection/completely_bsqli_integer.php,|mysql_select_db("w3af_test", $link);|,mysqli_()

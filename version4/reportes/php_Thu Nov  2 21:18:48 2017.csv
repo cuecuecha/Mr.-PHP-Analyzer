@@ -1,8 +1,0 @@
-3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login.php,|setcookie("magicValue2", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login-password-only.php,|setcookie("magicValue", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/bruteforce/form_login/login-password-only.php,|setcookie("magicValue2", "0000-1111-2222-3333-4444", time()+3600);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/nusoap.php,|function setCookie($name, $value) {|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/crawl/wsdl_finder/lib/class.soapclient.php,|function setCookie($name, $value) {|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/core/cookieFuzzing/cf.php,|setcookie("TestCookie", $value);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies
-3,sc,php/w3af-moth/webroot/moth/w3af/core/cookie_handler/set-cookie.php,|setcookie("TestCookie", $value);|,https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Cookies

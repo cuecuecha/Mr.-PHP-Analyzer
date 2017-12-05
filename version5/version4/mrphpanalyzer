@@ -1,5 +1,0 @@
-#!/bin/sh
-  
-##karakatakarakatari >.<
-
-python /opt/mrphpanalyzer/puzzle/main.py $*
