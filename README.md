@@ -28,7 +28,7 @@ HOW TO USE.......
 
 	mrphpanalyzer -r path.of.the.project  -v number.of.the.vulnerability 
 	
-	NOTE: For to know the number of the vulnerability, to run mrphpanalyzer --oso 
+	NOTE: For to know the number of the vulnerability, to run mrphpanalyzer --sos
 
 REPORTS OF FILES.....
 
