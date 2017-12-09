@@ -42,12 +42,6 @@ reporte.write ("""
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarResponsive">
 	      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-	        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
-	          <a class="nav-link" href="#">
-	            <i class="fa fa-fw fa-dashboard"></i>
-	            <span class="nav-link-text">Current Report</span>
-	          </a>
-	        </li>
 	        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
 	          <a class="nav-link" href="history.html">
 	            <i class="fa fa-fw fa-area-chart"></i>

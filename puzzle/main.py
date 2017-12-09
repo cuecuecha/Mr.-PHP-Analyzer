@@ -7,6 +7,7 @@ import report
 import csvcreate
 import vulnerability
 import generateHtml
+import os
 # -*- coding: utf-8 -*-
 __author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
 __copyright__="Copyright 2017, UNAM-CERT"
@@ -14,7 +15,7 @@ __license__="UNAM CERT"
 __version__="1.0"
 __status__="Prototype"
 parser = argparse.ArgumentParser(description='Finds vulnerabilities in php code')
-parser.add_argument('-r' , nargs=1,  help="root")
+parser.add_argument('-r' , nargs=1,  help="path")
 parser.add_argument('-v' , nargs=1, help="vulnerability")
 parser.add_argument('--sos', action="store_true", help="actions list")
 option = parser.parse_args()
@@ -102,3 +103,6 @@ if option.sos:
 		
         '''
 
+os.system('python /opt/mrphpanalyzer/puzzle/his.py')
+print("\n\nREPORTES\n\n")
+os.system('ls /opt/mrphpanalyzer/reportesHTML/*.html')
