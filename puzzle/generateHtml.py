@@ -13,7 +13,7 @@ __version__="1.0"
 __status__="Prototype"
 class get_html:
 	pass
-times = time.strftime("%Y%m%d-%H")
+
 
 #funcion para crear reporte
 
@@ -27,7 +27,9 @@ def creareporte():
 
 #funcion donde se crea sólo el header del reporte
 def headerhtml(reporte):
-	reporte.write ("""
+	ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H%M")
+	nombreArchivo = ahora+'.html'
+	header = """
 			<!DOCTYPE html>
 			<html lang="en">
 
@@ -59,7 +61,7 @@ def headerhtml(reporte):
 			    <div class="collapse navbar-collapse" id="navbarResponsive">
 			      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 			        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
-			          <a class="nav-link" href="#">
+			          <a class="nav-link" href="{}">
 			            <i class="fa fa-fw fa-dashboard"></i>
 			            <span class="nav-link-text">Current Report</span>
 			          </a>
@@ -84,10 +86,12 @@ def headerhtml(reporte):
 			  <div class="content-wrapper">
 			    <div class="container-fluid">
 			      <!-- Breadcrumbs-->
-			      <div class="breadcrumb" style="height: 350px;">
+			      <div class="breadcrumb" style="height: auto;">
 			        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
 			      </div>
-			   """)
+			   """
+	reportes = header.format(nombreArchivo)
+	reporte.write(reportes)   
 
 #funcion donde sea crea el canvas de las gráficas
 def graphic(reporte):
