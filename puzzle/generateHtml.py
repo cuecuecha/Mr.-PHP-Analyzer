@@ -49,17 +49,20 @@ def headerhtml(reporte):
 			  <!-- Custom styles for this template-->
 			  <link href="css/sb-admin.css" rel="stylesheet">
 			  <link href="css/style.css" rel="stylesheet">
+  			  <link rel="shortcut icon" type="text/css" href="img/pirate.ico">
+
 			</head>
 
 			<body class="fixed-nav sticky-footer bg-dark" id="page-top">
 			  <!-- Navigation-->
 			  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+			  <img src="img/pirate.png" style="width: 4%;"> 
 			    <a class="navbar-brand" href="index.html">Mr. PHP Analyzer</a>
 			    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			      <span class="navbar-toggler-icon"></span>
 			    </button>
 			    <div class="collapse navbar-collapse" id="navbarResponsive">
-			      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+			      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="top: 16px;">
 			        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Current Report">
 			          <a class="nav-link" href="{}">
 			            <i class="fa fa-fw fa-dashboard"></i>
