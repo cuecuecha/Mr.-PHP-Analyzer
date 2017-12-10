@@ -14,11 +14,11 @@ __status__="Prototype"
 class get_html:
 	pass
 
-
+times = datetime.datetime.now().strftime("%a%Y%m%d-%H%M")
 #funcion para crear reporte
 
 def creareporte():
-	ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H%M")
+	ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H")
 	nombreArchivo = ahora+'.html'
 	reporte = open('/opt/mrphpanalyzer/reportesHTML/'+nombreArchivo,'a')
 	return reporte
