@@ -27,7 +27,7 @@ def creareporte():
 
 #funcion donde se crea sólo el header del reporte
 def headerhtml(reporte):
-	ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H%M")
+	ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H")
 	nombreArchivo = ahora+'.html'
 	header = """
 			<!DOCTYPE html>
@@ -170,7 +170,7 @@ def jsgraphic(vulnes):
 		      yAxes: [{
 		        ticks: {
 		          min: 0,
-		          max: 200,
+		          max: %s,
 		          maxTicksLimit: 5
 		        },
 		        gridLines: {
@@ -196,7 +196,7 @@ def jsgraphic(vulnes):
 		  },
 		});
 	"""%(str(vulnes.get('1')),str(vulnes.get('2')), str(vulnes.get('3')),str(vulnes.get('4')),str(vulnes.get('5')),
-		str(vulnes.get('6')),str(vulnes.get('7')),
+		str(vulnes.get('6')),str(vulnes.get('7')), str(max(vulnes.values())),
 		str(vulnes.get('1')),str(vulnes.get('2')), str(vulnes.get('3')),str(vulnes.get('4')),str(vulnes.get('5')),
 		str(vulnes.get('6')),str(vulnes.get('7'))
 		) )
