@@ -105,4 +105,5 @@ if option.sos:
 
 os.system('python /opt/mrphpanalyzer/puzzle/his.py')
 print("\n\nREPORTES\n\n")
-os.system('ls /opt/mrphpanalyzer/reportesHTML/*.html')
+os.system('find /opt/mrphpanalyzer/reportesHTML/*.html ! -name "history.html" ')
+print("\n\n")
