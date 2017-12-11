@@ -54,7 +54,7 @@ def create_tables():
 			 ('call_user_method', 'call_user_method(\s\(|\().*?(\s\)|\))', 'call_user_func()', ' OBSOLETA en PHP 4.1.0', '4'),
 		   	 ('mcrypt_cbc y/o mcrypt_cfb y/o mcrypt_ecb y/o mcrypt_ofb', '(mcrypt_(cbc|cfb|ecb|ofb)(\(([\"\w\s\S\"]*)\)))', 'mcrypt_decrypt() o mcrypt_encrypt()', 'OBSOLETA en PHP 5.5.0', '1'),
 			 ('mysql_()', '^(\$.*?(\s=|\s=\s|=\s|=)mysql_.*?)|((\smysql_|mysql_).*)$', 'mysqli_()', 'OBSOLETA en PHP 5.3.0', '1')]
-	data_name_vul = [('sqli',' '),('xss', ' '),('sc', ' '),('send', ' '),('lfi&rfi', ' '),('pt', ' '),('ci', ' '),('ifc', ' ')]
+	data_name_vul = [('sqli',' '),('xss', ' '),('sc', ' '),('send', ' '),('lfi&rfi', ' '),('pt', ' '),('ci', ' '),('ifc', ' '),('fxss',' ')]
 	data_vulnerability = [
 			('1', 'find_in_set.*?\(.+?,.+?\)', 'Common MySQL function find_in_set', '16'),
 			('1', '\bmysql.*?\..*?user\b', 'MySQL information disclosure mysql.user', '16'),
@@ -75,10 +75,17 @@ def create_tables():
 			('1', '\bselect\b.+?\bfrom\b', 'Common SQL command select', '16'),
 			('1', '(SELECT\s)(current_)?database\b.*?\(.*?\)', 'Common SL command select database', '16'),
 			('1', '\bpg_database\b', 'PgSQL information disclosure pg_database', '16'),
-			('2', '>.*?<\s*\/?[\w\s]+>', 'Unquoted HTML breaking with closing tag', '2'),
-			#('2', '[\'\'].*?>', 'HTML breaking', '2'),
-			('2', '<base.+?href.+?>', 'Base URL', '3'),
-			('2', 'on\w+\s*=', 'HTML event handler', '3'),
+			#('2', '>.*?<\s*\/?[\w\s]+>', 'Unquoted HTML breaking with closing tag', '2'),
+			##('2', '[\'\'].*?>', 'HTML breaking', '2'),
+			#('2', '<base.+?href.+?>', 'Base URL', '3'),
+			#('2', 'on\w+\s*=', 'HTML event handler', '3'),
+			('9', '(\$.*?)=(.*?\$\_(POST|GET)(\[.*\]))', 'saber si esta igualado a una variable', '2'),
+			('9', '(\$.*?)=(.*?((preg|ereg)\_replace)\(.*?\))', 'tiene como filtro, reemplazar un valor', '2'),
+			('9', '.*?(echo)(.*?\$\_(POST|GET|SERVER)(\[.*\]))', 'salida con echo sin filtro', '2'),
+			('9', '(.*?die)\(\"error\"\)', 'marca error si encuentra coincidencia', '2'),
+			('9', '(.*?((preg|ereg)\_match)\(.*?\))', 'dado un parametro, si coincide con la entrada marca error en la pagina', '2'),
+			('9', '\$\_(POST|GET|SERVER)(\[.*\])', 'variable de entrada-salida', '2'),
+			('2', '.*?\$\_(GET|POST|SERVER)(\[.*\])', 'prueba', '2'),
 			('3', 'setcookie\(.*\)', 'Initialize cookie', '15'),
 			('3', 'session_set_cookie_params', 'parameters cookie', '15'),
 			('4', 'insert.+?into.*?values.*?\(.+?\)', 'Insecure Insert Value', '1'),

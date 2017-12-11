@@ -30,30 +30,37 @@ if option.r and option.v: #if option.r and option.v have some value, it will run
 		csvcreate.create_report("11")
 		generateHtml.footer(generateHtml.creareporte())	
 	elif option.v[0] is "2": #for the opction xss, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
 		report.create_re_vulist("2")
-		csvcreate.create_report("11")			
+		csvcreate.create_report("11")	
+		generateHtml.footer(generateHtml.creareporte())		
 	elif option.v[0] is "3": #for the opction session's cookies, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
 	        report.create_re_vulist("3")
 	        csvcreate.create_report("11")
-
+		generateHtml.footer(generateHtml.creareporte())
 	elif option.v[0] is "4": #for the opction send sensible information, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
 		report.create_re_vulist("4")
 		csvcreate.create_report("11")
-
+		generateHtml.footer(generateHtml.creareporte())
 	elif option.v[0] is "5": #for the opction LFI & RFI, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
                 report.create_re_vulist("5")
                 csvcreate.create_report("11")
-
+                generateHtml.footer(generateHtml.creareporte())
 	elif option.v[0] is "6": #for the opction path traversal, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
                 report.create_re_vulist("6")
                 csvcreate.create_report("11")
-
+                generateHtml.footer(generateHtml.creareporte())
 	elif option.v[0] is "7": #for the opction command injection, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte())
 		report.create_reportlist()
                 report.create_re_vulist("7")
                 csvcreate.create_report("11")
