@@ -1,8 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
 # finding the way...
-FILE="/tmp/out.$$"
-GREP="/bin/grep"
 #solo root puede ejecutar el script
 if [[ $EUID -ne 0 ]]; then
 	echo -e "\n \033[0;31mDebe ejecutarse como root \033[0m\n" 1>&2
