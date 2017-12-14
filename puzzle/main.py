@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 import version
 import argparse
@@ -111,6 +110,4 @@ if option.sos:
         '''
 
 os.system('python /opt/mrphpanalyzer/puzzle/his.py')
-print("\n\nREPORTES\n\n")
-os.system('find /opt/mrphpanalyzer/reportesHTML/*.html ! -name "history.html" ')
-print("\n\n\n")
+generateHtml.listfiles()
