@@ -63,6 +63,8 @@ if option.r and option.v: #if option.r and option.v have some value, it will run
 		report.create_reportlist()
                 report.create_re_vulist("7")
                 csvcreate.create_report("11")
+                generateHtml.footer(generateHtml.creareporte())
+                
 	elif option.v[0] is "9": #for the opction obsolete functions only these
 		if v is "7":
 			print"Didn't find obsolete functions"    	
