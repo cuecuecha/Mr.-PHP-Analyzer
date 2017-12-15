@@ -5,6 +5,7 @@ import datetime
 import time
 import os.path
 from random import randint
+import __main__
 # -*- coding: utf-8 -*-
 __author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
 __copyright__="Copyright 2017, UNAM-CERT"
@@ -15,20 +16,19 @@ class get_html:
 	pass
 
 times = datetime.datetime.now().strftime("%a%Y%m%d-%H%M%S")
-ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H")
 nombreArchivo = times+'.html'
 #funcion para crear reporte
 
 def creareporte():
-	reporte = open('/opt/mrphpanalyzer/reportesHTML/'+nombreArchivo,'a')
+	global proyecto
+	proyecto = __main__.pag
+	reporte = open('/opt/mrphpanalyzer/reportesHTML/'+__main__.pag+nombreArchivo,'a')
 	return reporte
 
 
 
 #funcion donde se crea sólo el header del reporte
-def headerhtml(reporte):
-	ahora = datetime.datetime.now().strftime("%a%Y%m%d-%H")
-	nombreArchivo = ahora+'.html'
+def headerhtml(reporte, proyecto):
 	header = """
 			<!DOCTYPE html>
 			<html lang="en">
@@ -92,10 +92,11 @@ def headerhtml(reporte):
 			      <div class="breadcrumb" style="height: auto;">
 			        <img class="img-responsive" src="img/cert.png" alt="UNAM-CERT" style="display: block; margin:auto; width: 25%;">
 			      </div>
+			    </div>
+			    <h1 style="text-align: center; font-size: 64px;">{}</h1>
 			   """
-	reportes = header.format(nombreArchivo)
+	reportes = header.format(nombreArchivo, proyecto)
 	reporte.write(reportes)   
-
 #funcion donde sea crea el canvas de las gráficas
 def graphic(reporte):
 	reporte.write("""
@@ -113,7 +114,6 @@ def graphic(reporte):
 
 		        </div>
 		      </div>
-		      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 		    </div>
 		    <!-- Card Columns Example Social Feed-->
 		    
@@ -126,7 +126,6 @@ def graphic(reporte):
 		      <div class="card-body">
 		        <canvas id="myPieChart" width="100%" height="150"></canvas>
 		      </div>
-		      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 		    </div>
 		  </div>
 		</div>
@@ -283,7 +282,6 @@ def tablehtml(table,reporte, option):
 	      </table>
 	    </div>
 	  </div>
-	  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 	</div>
 	
 
@@ -363,5 +361,5 @@ def escribereporte(reporte, info):
 
 def listfiles():
 	print("\n\nREPORTE HTML\n\n")
-	os.system('find /opt/mrphpanalyzer/reportesHTML/'+nombreArchivo)
+	os.system('find /opt/mrphpanalyzer/reportesHTML/'+proyecto+nombreArchivo)
 	print("\n\n\n")
