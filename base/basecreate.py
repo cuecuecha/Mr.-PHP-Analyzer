@@ -54,7 +54,7 @@ def create_tables():
 			 ('call_user_method', 'call_user_method(\s\(|\().*?(\s\)|\))', 'call_user_func()', ' OBSOLETA en PHP 4.1.0', '4'),
 		   	 ('mcrypt_cbc y/o mcrypt_cfb y/o mcrypt_ecb y/o mcrypt_ofb', '(mcrypt_(cbc|cfb|ecb|ofb)(\(([\"\w\s\S\"]*)\)))', 'mcrypt_decrypt() o mcrypt_encrypt()', 'OBSOLETA en PHP 5.5.0', '1'),
 			 ('mysql_()', '^(\$.*?(\s=|\s=\s|=\s|=)mysql_.*?)|((\smysql_|mysql_).*)$', 'mysqli_()', 'OBSOLETA en PHP 5.3.0', '1')]
-	data_name_vul = [('sqli',' '),('xss', ' '),('sc', ' '),('send', ' '),('lfi&rfi', ' '),('pt', ' '),('ci', ' '),('ifc', ' '),('fxss',' ')]
+	data_name_vul = [('sqli',' '),('xss', ' '),('sc', ' '),('send', ' '),('lfi&rfi', ' '),('pt', ' '),('ci', ' '),('ifc', ' '),('fxss',' '),('fci',' '),('iifc', ' '),('scok', ' ')]
 	data_vulnerability = [
 			('1', 'find_in_set.*?\(.+?,.+?\)', 'Common MySQL function find_in_set', '16'),
 			('1', '\bmysql.*?\..*?user\b', 'MySQL information disclosure mysql.user', '16'),
@@ -86,10 +86,16 @@ def create_tables():
 			('9', '(.*?((preg|ereg)\_match)\(.*?\))', 'dado un parametro, si coincide con la entrada marca error en la pagina', '2'),
 			('9', '\$\_(POST|GET|SERVER)(\[.*\])', 'variable de entrada-salida', '2'),
 			('2', '.*?\$\_(GET|POST|SERVER)(\[.*\])', 'prueba', '2'),
-			('3', 'setcookie\(.*\)', 'Initialize cookie', '15'),
-			('3', 'session_set_cookie_params', 'parameters cookie', '15'),
-			('4', 'insert.+?into.*?values.*?\(.+?\)', 'Insecure Insert Value', '1'),
-			('4', '(?<!(basename\(\s))\$\_FILES(\[.*\])', 'Function basename', '1'),
+			('3', 'set(cookie|rawcookie)(\s)*\(.*\)', 'Initialize cookie', '15'),
+                        ('12', '.*(\$\_(GET|POST)(\[.*\]|.*))', 'parameters tiene metodo post o get', '15'),
+                        ('12', '.*\$[a-zA-Z0-9]*', 'parameters si es una variable', '15'),
+                        ('12', '(.*?\$.*=.*\$\_(GET|POST)\[.*\])', 'parameters cookie para saber si hay una variable con get o post', '15'),
+                        ('12', '(.*?)(random_int|random_bytes|openssl_random_pseudo_bytes)\(.*\)', 'para hacer una sal aleatoria', '15'),
+                        ('12', '(.*?)(md5|sha1|base64_encode|crypt)\(.*\)', 'funciones debiles', '15'),
+                        ('4', '(.*?)(md5|sha1|base64_encode|crypt)\(.*\)', 'funciones debiles', '1'),
+			#('4', 'insert.+?into.*?values.*?\(.+?\)', 'Insecure Insert Value', '1'),
+			#('4', '(?<!(basename\(\s))\$\_FILES(\[.*\])', 'Function basename', '1'),
+			#('4', '(\$\_(FILES|REQUEST)(\[.*\])', 'verificacion de parametro', '1'),
 			('100', '\.\.[\/\\\]', 'Directory traversal', '5'),
 			('5', '%2e%2e[\/\\\]', 'Directory traversal urlencoding', '5'),
 			('5', '%c0%ae[\/\\\]', 'Directory traversal urlencoding', '5'),
@@ -115,11 +121,24 @@ def create_tables():
 			('6', '%(c0\.|af\.|5c\.)', 'Directory traversal unicode urlencoding', '16'),
 			('6', '%2e%2e[\/\\\]', 'Directory traversal urlencoding', '16'),
 			('6', '%c0%ae[\/\\\]', 'Directory traversal unicode urlencoding', '16'),
-			('7', '^system\s\(.*\)', 'function system', '14'),
-			('7', '[^_]exec\(', 'command exec', '14'),
-			('7', 'query\(', 'function query', '14'),
-			('7', 'shell_exec\(.*\)', 'function execute commands', '14'),
-			('7', 'p(roc_)?open.*?\(.+?\)', 'Critical PHP function "popen/proc_open"', '14')
+			#('7', '^system\s\(.*\)', 'function system', '14'),
+			#('7', '[^_]exec\(', 'command exec', '14'),
+			#('7', 'query\(', 'function query', '14'),
+			#('7', 'shell_exec\(.*\)', 'function execute commands', '14'),
+			#('7', 'p(roc_)?open.*?\(.+?\)', 'Critical PHP function "popen/proc_open"', '14')
+			('7', '(.*?)(system|eval|(curl\_(multi\_)?|(shell_))?exec|passthru|p(roc\_)?open|dl)(\s)?\(.*\)(.*?)', 'deteccion de funciones vulnerables', '14'),
+			('10', '.*(\$\_(GET|POST)\[.*\])', 'para saber el tipo de parametro de la funcion', '14'),
+                        ('10', '.*\$[a-zA-Z0-9]*', 'para saber el tipo de parametro de la funcion', '14'),
+                        ('10', '(.*?\$.*=.*\$\_(GET|POST)\[.*\])', 'para saber si hay una variable con get o post', '14'),
+                        ('10', '(.*?((preg|ereg)\_(match|replace))\(.*?\$.*?(m|e).*?\))', 'mala implementacion de expresion regular', '14'),
+                        ('10', '(.*?((preg|ereg)\_(match|replace))\(.*?\$/\s?\'.*?\))', 'buena implementacion de expresion regular', '14'),
+                        ('10', '.*?die\(\".*\"\)', 'marca error si encuentra coincidencia', '14'),
+                        ('10', '(.*?)(escapeshell(arg|cmd)|basename|is\_numeric)(.*?)', 'funciones que hacen filtrado de la entrada', '14'),
+                        ('8', '(.*?)(system|eval|assert|include|require|create\_function|preg_replace)(\s)?\(.*\)(.*?)', 'deteccion de funciones vulnerables', '14'),
+                        ('11', '.*(\$\_(GET|POST)\[.*\])', 'para saber el tipo de parametro de la funcion', '14'),
+                        ('11', '.*\$[a-zA-Z0-9]*', 'para saber el tipo de parametro de la funcion', '14'),
+                        ('11', '(.*?\$.*=.*\$\_(GET|POST)\[.*\])', 'para saber si hay una variable con get o post', '14'),
+                        ('11', '(.*?)(escapeshell(arg|cmd)|basename|is\_numeric|htmlspecialchars|addcslashes|stripcslashes|stripslashes|filter_var)(.*?)', 'funciones que hacen filtrado de la entrada', '14')
 			]
 
 

@@ -65,6 +65,12 @@ if option.r and option.v: #if option.r and option.v have some value, it will run
                 report.create_re_vulist("7")
                 csvcreate.create_report("11")
                 generateHtml.footer(generateHtml.creareporte())
+	 elif option.v[0] is "8": #for the opction code injection, only this vulnerability
+                generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
+                report.create_reportlist()
+                report.create_re_vulist("8")
+                csvcreate.create_report("11")
+                generateHtml.footer(generateHtml.creareporte())
 
 	elif option.v[0] is "9": #for the opction obsolete functions only these
 		if v is "7":
