@@ -363,3 +363,21 @@ def listfiles():
 	print("\n\nREPORTE HTML\n\n")
 	os.system('find /opt/mrphpanalyzer/reportesHTML/'+proyecto+nombreArchivo)
 	print("\n\n\n")
+
+def list_files(startpath, reporte):
+
+    for root, dirs, files in os.walk(startpath):
+        level = root.replace(startpath, '').count(os.sep)
+        indent = '&nbsp;&nbsp;' * 4 * (level)
+        pr = '{}{}/'.format(indent, os.path.basename(root))
+        subindent = '&nbsp;&nbsp;' * 4 * (level + 1)
+        reporte.write("""
+        		%s
+        		<br>
+        	"""%pr)
+        for f in files:
+            sub = '{}{}'.format(subindent, f)
+            reporte.write("""
+            		%s
+            		<br>
+            	"""%sub)
