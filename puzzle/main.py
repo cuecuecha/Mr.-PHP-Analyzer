@@ -18,55 +18,64 @@ parser.add_argument('-r' , nargs=1,  help="path")
 parser.add_argument('-v' , nargs=1, help="vulnerability")
 parser.add_argument('--sos', action="store_true", help="actions list")
 option = parser.parse_args()
-a=option.r[0].rsplit("/")
-pag=a[-2]
+try:
+	a=option.r[0].rsplit("/")
+	pag=a[-2]
+except TypeError:
+	print ""
 if option.r and option.v: #if option.r and option.v have some value, it will run functions depending of the options 
 	files.get_files(option.r[0])
 	v=version.get_version()
-	if option.v[0] is "1": #for the opction sqli, only this vulnerability
+	if option.v[0] is "1": #for the option sqli, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
 		report.create_re_vulist("1")
 		csvcreate.create_report("11")
 		generateHtml.footer(generateHtml.creareporte())	
-	elif option.v[0] is "2": #for the opction xss, only this vulnerability
+	elif option.v[0] is "2": #for the option xss, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
 		report.create_re_vulist("2")
 		csvcreate.create_report("11")	
 		generateHtml.footer(generateHtml.creareporte())		
-	elif option.v[0] is "3": #for the opction session's cookies, only this vulnerability
+	elif option.v[0] is "3": #for the option session's cookies, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
 	        report.create_re_vulist("3")
 	        csvcreate.create_report("11")
 		generateHtml.footer(generateHtml.creareporte())
-	elif option.v[0] is "4": #for the opction send sensible information, only this vulnerability
+	elif option.v[0] is "4": #for the option send sensible information, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
 		report.create_re_vulist("4")
 		csvcreate.create_report("11")
 		generateHtml.footer(generateHtml.creareporte())
-	elif option.v[0] is "5": #for the opction LFI & RFI, only this vulnerability
+	elif option.v[0] is "5": #for the option LFI & RFI, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
                 report.create_re_vulist("5")
                 csvcreate.create_report("11")
                 generateHtml.footer(generateHtml.creareporte())
-	elif option.v[0] is "6": #for the opction path traversal, only this vulnerability
+	elif option.v[0] is "6": #for the option path traversal, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
                 report.create_re_vulist("6")
                 csvcreate.create_report("11")
                 generateHtml.footer(generateHtml.creareporte())
-	elif option.v[0] is "7": #for the opction command injection, only this vulnerability
+	elif option.v[0] is "7": #for the option command injection, only this vulnerability
 		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 		report.create_reportlist()
                 report.create_re_vulist("7")
                 csvcreate.create_report("11")
                 generateHtml.footer(generateHtml.creareporte())
+	elif option.v[0] is "8": #for the option code injection, only this vulnerability
+		generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
+		report.create_reportlist()
+		report.create_re_vulist("8")
+		csvcreate.create_report("11")
+		generateHtml.footer(generateHtml.creareporte())
 
-	elif option.v[0] is "9": #for the opction obsolete functions only these
+	elif option.v[0] is "9": #for the option obsolete functions only these
 		if v is "7":
 			print"Didn't find obsolete functions"    	
 		else:

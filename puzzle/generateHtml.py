@@ -363,9 +363,14 @@ def escribereporte(reporte, info):
 		"""%info)
 
 def listfiles():
-	print("\n\nREPORTE HTML\n\n")
-	os.system('find /opt/mrphpanalyzer/reportesHTML/'+proyecto+nombreArchivo)
-	print("\n\n\n")
+	try:
+
+		print("\n\nREPORTE HTML\n\n")
+		os.system('find /opt/mrphpanalyzer/reportesHTML/'+proyecto+nombreArchivo)
+		print("\n\n\n")
+	except NameError:
+		print ""
+
 
 def list_files(startpath, reporte):
 
