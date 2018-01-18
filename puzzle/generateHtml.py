@@ -21,7 +21,11 @@ nombreArchivo = times+'.html'
 
 def creareporte():
 	global proyecto
+	global nombre
+	global tree
 	proyecto = __main__.pag
+	nombre = proyecto + nombreArchivo
+	tree = "tree"+nombre
 	reporte = open('/opt/mrphpanalyzer/reportesHTML/'+__main__.pag+nombreArchivo,'a')
 	return reporte
 
@@ -95,7 +99,7 @@ def headerhtml(reporte, proyecto):
 			    </div>
 			    <h1 style="text-align: center; font-size: 64px;">{}</h1>
 			   """
-	reportes = header.format(nombreArchivo, proyecto)
+	reportes = header.format(nombre, proyecto)
 	reporte.write(reportes)   
 #funcion donde sea crea el canvas de las gráficas
 def graphic(reporte):
@@ -105,7 +109,7 @@ def graphic(reporte):
 		    <!-- Example Bar Chart Card-->
 		    <div class="card mb-3">
 		      <div class="card-header">
-		        <i class="fa fa-bar-chart"></i> Vulnerabilities</div>
+		        <i class="fa fa-bar-chart"></i> Possible Vulnerabilities</div>
 		      <div class="card-body">
 		        <div class="row">
 		          
@@ -115,11 +119,10 @@ def graphic(reporte):
 		        </div>
 		      </div>
 		    </div>
-		    <!-- Card Columns Example Social Feed-->
+		    <!-- Card Columns-->
 		    
 		  </div>
 		  <div class="col-lg-4">
-		    <!-- Example Pie Chart Card-->
 		    <div class="card mb-3">
 		      <div class="card-header">
 		        <i class="fa fa-pie-chart"></i>Stadistics</div>
@@ -366,18 +369,37 @@ def listfiles():
 
 def list_files(startpath, reporte):
 
-    for root, dirs, files in os.walk(startpath):
-        level = root.replace(startpath, '').count(os.sep)
-        indent = '&nbsp;&nbsp;' * 4 * (level)
-        pr = '{}{}/'.format(indent, os.path.basename(root))
-        subindent = '&nbsp;&nbsp;' * 4 * (level + 1)
-        reporte.write("""
+	reporte.write("""
+		<button type="button" class="btn btn-outline-warning" onclick="tre1()" style="margin-left: 10%;">Structure of the project</button>
+		<br><br>
+		<div style="margin-left: 7%; display:none;" id="tree1" > """)
+	for root, dirs, files in os.walk(startpath):
+		level = root.replace(startpath, '').count(os.sep)
+		indent = '&nbsp;&nbsp;' * 4 * (level)
+		pr = '{}|__{}/'.format(indent, os.path.basename(root))
+		subindent = '&nbsp;&nbsp;' * 4 * (level + 1)
+		reporte.write("""
         		%s
         		<br>
         	"""%pr)
-        for f in files:
-            sub = '{}{}'.format(subindent, f)
-            reporte.write("""
-            		%s
-            		<br>
+		for f in files:
+		    sub = '{}|__{}'.format(subindent, f)
+		    reporte.write("""
+		    		%s
+		    		<br>
             	"""%sub)
+	reporte.write("""
+		</div>
+		<script>
+			var tr1 = document.getElementById('tree1');
+			function tre1() {
+			if (tr1.style.display === 'none') {
+				tr1.style.display = 'block';
+				}else {
+					tr1.style.display = 'none';
+				}
+			}
+
+		</script>
+		<br><br><br>
+		""")
