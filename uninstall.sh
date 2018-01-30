@@ -7,10 +7,10 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 	echo "
-░░░███████ ]▄▄▄▄▄▄▄▄         'La autocrítica
-▂▄▅█████████▅▄▃▂           ☻/   está muy bien,
-███████████████████].     /▌     mientras no tenga
- ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤..        /\      que ver con uno mismo﻿' "
+    ███████ ]▄▄▄▄▄▄▄▄
+▂▄▅█████████▅▄▃▂           ☻/
+███████████████████].     /▌
+ ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤..        /\    "
 	echo ""
 	echo "Deleting file /opt/mrphpanalyzer" 
 		rm -fr /opt/mrphpanalyzer
