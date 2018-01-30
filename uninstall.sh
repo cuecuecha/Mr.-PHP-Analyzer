@@ -8,8 +8,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 	echo "
     ███████ ]▄▄▄▄▄▄▄▄
-▂▄▅█████████▅▄▃▂           ☻/
-███████████████████].     /▌
+▂▄▅█████████▅▄▃▂           ☻/		You don't know to the
+███████████████████].     /▌			way... jajaja
  ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤..        /\    "
 	echo ""
 	echo "Deleting file /opt/mrphpanalyzer" 
