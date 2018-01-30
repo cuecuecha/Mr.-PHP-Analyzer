@@ -123,8 +123,10 @@ if option.sos:
         '''
 
 os.system('python /opt/mrphpanalyzer/puzzle/his.py')
-generateHtml.listfiles()
-
+try:
+	generateHtml.listfiles()
+except NameError:
+	print ""
 
 def nameProject():
 	print a[-2]
