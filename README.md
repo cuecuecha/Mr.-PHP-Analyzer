@@ -21,14 +21,18 @@ It can find the following vulnerabilities:
 INSTALLATION......
 
 	git clone https://github.com/cuecuecha/Mr.-PHP-Analyzer.git
-	cd version5/version4
-	sh install.sh
+	In root use:
+	bash install.sh
 
 HOW TO USE.......
 
 	mrphpanalyzer -r path.of.the.project  -v number.of.the.vulnerability 
 	
 	NOTE: For to know the number of the vulnerability, to run mrphpanalyzer --sos
+UNINSTALL.....
+
+	In root git use:
+		bash uninstall.sh
 
 REPORTS OF FILES.....
 
