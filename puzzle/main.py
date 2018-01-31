@@ -7,6 +7,7 @@ import csvcreate
 import vulnerability
 import generateHtml
 import os
+import threading
 # -*- coding: utf-8 -*-
 __author__="Coronado Gozain Saine, Hernandez Cuecuecha Jorge Alberto"
 __copyright__="Copyright 2017, UNAM-CERT"
@@ -99,12 +100,41 @@ elif option.r: #if option.r has some value but option.v does not have, it will r
 	generateHtml.headerhtml(generateHtml.creareporte(), a[-2])
 	generateHtml.list_files(option.r[0],generateHtml.creareporte())
 	generateHtml.graphic(generateHtml.creareporte())
-	prov=["1","2","3","4","5","6","7","8"]
+	#prov=["1","2","3","4","5","6","7","8"]
 	files.get_files(option.r[0])
         v=version.get_version()
 	report.create_reportlist()
-	for o in range(len(prov)):
-        	report.create_re_vulist(prov[o])
+	#for o in range(len(prov)):
+        #	report.create_re_vulist(prov[o])
+	threads = []
+	thread = threading.Thread(target=report.create_re_vulist, args=("1",)) 
+    	thread.start()
+    	threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("2",))
+        thread.start()
+        threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("3",))
+        thread.start()
+        threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("4",))
+        thread.start()
+        threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("5",))
+        thread.start()
+        threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("6",))
+        thread.start()
+        threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("7",))
+        thread.start()
+        threads.append(thread)
+	thread = threading.Thread(target=report.create_re_vulist, args=("8",))
+        thread.start()
+        threads.append(thread)
+
+	for thread in threads:
+    		thread.join()
+
 	if v is "7":
         	print"Didn't find obsolete functions"           
        	else:
