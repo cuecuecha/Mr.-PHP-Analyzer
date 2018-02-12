@@ -25,15 +25,19 @@ def open_file (file): #it compares regular expression with every line from file
                 	for e in cursor.execute('SELECT expression FROM versions WHERE version=4'):
                         	c=list(e)
                         	expression.append(c[0])
-		with open(file,"r") as f:
-       			for line in f.readlines():
-           			line = line.strip()
-          			if re.match(r'^\s*$', line): continue #if line is empty, continue with the next one
-           			if line[0] == '#': continue
-				if re.match(r'^(\/\*(\s*|.*?))|((\s*|.*?)\*\/)|(\/\/.*)$',line): continue
-				for x in range(len(expression)):
-					if re.match(expression[x], line): #if regular expression compares with line, it will add current version into list "table" 
-						table.append(version[v])
+		try:
+			with open(file,"r") as f:
+	       			for line in f.readlines():
+	           			line = line.strip()
+	          			if re.match(r'^\s*$', line): continue #if line is empty, continue with the next one
+	           			if line[0] == '#': continue
+					if re.match(r'^(\/\*(\s*|.*?))|((\s*|.*?)\*\/)|(\/\/.*)$',line): continue
+					for x in range(len(expression)):
+						if re.match(expression[x], line): #if regular expression compares with line, it will add current version into list "table" 
+							table.append(version[v])
+		except IOError:
+			print "Introduce an absolute path"
+			exit()
 		if expression: #if list isn't empty, it will remove all elements of the list "expression" 
 			del expression[:]
 	cursor.close()	#disconnect from database		        
